@@ -17,10 +17,12 @@
     "axios": "^1.7.3",
     "flowbite-react": "^0.8.0",
     "react": "^18.2.0",
+    "react-data-table-component": "^7.6.2",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.52.1",
     "react-router-dom": "^6.26.0",
     "react-select": "^5.8.0",
+    "react-toastify": "^10.0.5",
     "react-transition-group": "^4.4.5"
   },
   "devDependencies": {

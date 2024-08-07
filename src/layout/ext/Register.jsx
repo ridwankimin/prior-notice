@@ -3,7 +3,9 @@ import LuarModel from '../../model/LuarModel'
 import { Controller, useForm } from 'react-hook-form'
 import KodeNegara from '../../assets/json/kodeNegara.json'
 import Select from 'react-select'
-import { Button, Label, TextInput, Textarea } from 'flowbite-react'
+import { HiInformationCircle } from "react-icons/hi"
+import { IoMdCheckmarkCircleOutline } from "react-icons/io"
+import { Alert, Button, Label, Spinner, TextInput, Textarea } from 'flowbite-react'
 import UserEksModel from '../../model/UserEksModel'
 
 const modelAdd = new LuarModel()
@@ -65,6 +67,8 @@ const customStyles = {
 }
 
 function Register() {
+    let [loading, setLoading] = useState(false)
+    let [alert, setAlert] = useState("")
     let [lokasi, setLokasi] = useState({
         latitude: "",
         longitude: ""
@@ -128,12 +132,25 @@ function Register() {
 
     const onSubmit = (values) => {
         console.log(values)
+        setLoading(true)
         const response = modelUser.registrasi(values)
         response
         .then((response) => {
+            setLoading(false)
+            setAlert(values => ({
+                ...values,
+                status: response?.data?.status,
+                pesan: response?.data?.message,
+            }));
             console.log(response)
         })
         .catch((error) => {
+            setLoading(false)
+            setAlert(values => ({
+                ...values,
+                status: error?.response?.data?.status || false,
+                pesan: error?.response?.data?.message || 'Registration failed',
+            }));
             console.log(error)
         })
     }
@@ -156,6 +173,11 @@ function Register() {
                         <p className="mt-4 text-gray-500 dark:text-gray-400">
                             Lets get you all set up so you can verify your personal account and begin setting up your profile.
                         </p>
+                        {alert ?
+                        <Alert className='mt-4' color={alert?.status ? "success" : "failure"} icon={alert?.status ? IoMdCheckmarkCircleOutline : HiInformationCircle}>
+                                <span className="font-medium">{alert?.pesan}</span>
+                            </Alert>
+                            : ""}
 
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <div className="grid grid-cols-1 gap-4 mt-8 mb-2 md:grid-cols-2">
@@ -332,7 +354,7 @@ function Register() {
                                 </div>
                             </div>
 
-                            <Button type='submit' gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>Sign Up</Button>
+                            <Button type={loading ? 'button' : 'submit'} disabled={loading} gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>{loading ? <Spinner aria-label="Default status example" /> : 'Sign Up'}</Button>
                         </form>
                     </div>
                 </div>

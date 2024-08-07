@@ -1,0 +1,2461 @@
+[ 
+{ 
+"id":1,
+"kode":"BE",
+"deskripsi":"Bundle",
+"deskripsi_pl":"Bundles"
+},
+{ 
+"id":2,
+"kode":"BG",
+"deskripsi":"Bag",
+"deskripsi_pl":"Bags"
+},
+{ 
+"id":3,
+"kode":"BK",
+"deskripsi":"Basket",
+"deskripsi_pl":"Basket"
+},
+{ 
+"id":4,
+"kode":"BL",
+"deskripsi":"Bale",
+"deskripsi_pl":"Bale"
+},
+{ 
+"id":5,
+"kode":"BT",
+"deskripsi":"Bottle",
+"deskripsi_pl":"Bottles"
+},
+{ 
+"id":6,
+"kode":"BX",
+"deskripsi":"Box",
+"deskripsi_pl":"Boxes"
+},
+{ 
+"id":7,
+"kode":"CA",
+"deskripsi":"Can, rectangular",
+"deskripsi_pl":"Can, rectangular"
+},
+{ 
+"id":8,
+"kode":"CG",
+"deskripsi":"Cage",
+"deskripsi_pl":"Cages"
+},
+{ 
+"id":9,
+"kode":"CJ",
+"deskripsi":"Coffin",
+"deskripsi_pl":"Coffin"
+},
+{ 
+"id":10,
+"kode":"CL",
+"deskripsi":"Coli",
+"deskripsi_pl":"Coli"
+},
+{ 
+"id":11,
+"kode":"CO",
+"deskripsi":"Colony",
+"deskripsi_pl":"Colony"
+},
+{ 
+"id":12,
+"kode":"CR",
+"deskripsi":"Crate",
+"deskripsi_pl":"Crates"
+},
+{ 
+"id":13,
+"kode":"CS",
+"deskripsi":"Case",
+"deskripsi_pl":"Cases"
+},
+{ 
+"id":14,
+"kode":"CT",
+"deskripsi":"Carton",
+"deskripsi_pl":"Cartons"
+},
+{ 
+"id":15,
+"kode":"CU",
+"deskripsi":"Cup",
+"deskripsi_pl":"Cups"
+},
+{ 
+"id":16,
+"kode":"CV",
+"deskripsi":"Cover",
+"deskripsi_pl":"Cover"
+},
+{ 
+"id":17,
+"kode":"CX",
+"deskripsi":"Can, cylindrical",
+"deskripsi_pl":"Can, cylindrical"
+},
+{ 
+"id":18,
+"kode":"CY",
+"deskripsi":"Cylinder",
+"deskripsi_pl":"Cylinder"
+},
+{ 
+"id":19,
+"kode":"CZ",
+"deskripsi":"Canvas",
+"deskripsi_pl":"Canvas"
+},
+{ 
+"id":20,
+"kode":"DR",
+"deskripsi":"Drum",
+"deskripsi_pl":"Drums"
+},
+{ 
+"id":21,
+"kode":"EN",
+"deskripsi":"Envelope",
+"deskripsi_pl":"Envelope"
+},
+{ 
+"id":22,
+"kode":"FD",
+"deskripsi":"Framed crate",
+"deskripsi_pl":"Framed crate"
+},
+{ 
+"id":23,
+"kode":"FR",
+"deskripsi":"Frame",
+"deskripsi_pl":"Frame"
+},
+{ 
+"id":24,
+"kode":"JC",
+"deskripsi":"Jerrican, rectangular",
+"deskripsi_pl":"Jerrican, rectangular"
+},
+{ 
+"id":25,
+"kode":"JG",
+"deskripsi":"Jug",
+"deskripsi_pl":"Jug"
+},
+{ 
+"id":26,
+"kode":"JR",
+"deskripsi":"Jar",
+"deskripsi_pl":"Jar"
+},
+{ 
+"id":27,
+"kode":"JY",
+"deskripsi":"Jerrican, cylindrical",
+"deskripsi_pl":"Jerrican, cylindrical"
+},
+{ 
+"id":28,
+"kode":"KM",
+"deskripsi":"Kemasan",
+"deskripsi_pl":"Kemasan"
+},
+{ 
+"id":29,
+"kode":"KS",
+"deskripsi":"Kiso",
+"deskripsi_pl":"Kiso"
+},
+{ 
+"id":30,
+"kode":"MB",
+"deskripsi":"Multiply bag",
+"deskripsi_pl":"Multiply bag"
+},
+{ 
+"id":31,
+"kode":"MC",
+"deskripsi":"milk crate",
+"deskripsi_pl":"milk crate"
+},
+{ 
+"id":32,
+"kode":"MT",
+"deskripsi":"Meter persegi",
+"deskripsi_pl":"Meter persegi"
+},
+{ 
+"id":33,
+"kode":"NE",
+"deskripsi":"Unpacked or unpackaged",
+"deskripsi_pl":"Unpacked or unpackaged"
+},
+{ 
+"id":34,
+"kode":"NS",
+"deskripsi":"Nest",
+"deskripsi_pl":"Nest"
+},
+{ 
+"id":35,
+"kode":"NT",
+"deskripsi":"Net",
+"deskripsi_pl":"Net"
+},
+{ 
+"id":36,
+"kode":"PA",
+"deskripsi":"Packet",
+"deskripsi_pl":"Packet"
+},
+{ 
+"id":37,
+"kode":"PC",
+"deskripsi":"Parcel",
+"deskripsi_pl":"Parcel"
+},
+{ 
+"id":38,
+"kode":"PG",
+"deskripsi":"Plate",
+"deskripsi_pl":"Plate"
+},
+{ 
+"id":39,
+"kode":"PH",
+"deskripsi":"Pitcher",
+"deskripsi_pl":"Pitcher"
+},
+{ 
+"id":40,
+"kode":"PI",
+"deskripsi":"Pipe",
+"deskripsi_pl":"Pipe"
+},
+{ 
+"id":41,
+"kode":"PK",
+"deskripsi":"Package",
+"deskripsi_pl":"Package"
+},
+{ 
+"id":42,
+"kode":"PL",
+"deskripsi":"PALLET",
+"deskripsi_pl":"PALLET"
+},
+{ 
+"id":43,
+"kode":"PO",
+"deskripsi":"Pouch",
+"deskripsi_pl":"Pouch"
+},
+{ 
+"id":44,
+"kode":"PT",
+"deskripsi":"Pot",
+"deskripsi_pl":"Pot"
+},
+{ 
+"id":45,
+"kode":"RG",
+"deskripsi":"Ring",
+"deskripsi_pl":"Ring"
+},
+{ 
+"id":46,
+"kode":"RO",
+"deskripsi":"Roll",
+"deskripsi_pl":"Roll"
+},
+{ 
+"id":47,
+"kode":"SA",
+"deskripsi":"Sack",
+"deskripsi_pl":"Sack"
+},
+{ 
+"id":48,
+"kode":"SF",
+"deskripsi":"SQFT",
+"deskripsi_pl":"SQFT"
+},
+{ 
+"id":49,
+"kode":"SH",
+"deskripsi":"Sachet",
+"deskripsi_pl":"Sachet"
+},
+{ 
+"id":50,
+"kode":"SK",
+"deskripsi":"Skeleton case",
+"deskripsi_pl":"Skeleton case"
+},
+{ 
+"id":51,
+"kode":"SS",
+"deskripsi":"PIECES",
+"deskripsi_pl":"PIECES"
+},
+{ 
+"id":52,
+"kode":"ST",
+"deskripsi":"Sheet",
+"deskripsi_pl":"Sheet"
+},
+{ 
+"id":53,
+"kode":"SU",
+"deskripsi":"Suitcase",
+"deskripsi_pl":"Suitcase"
+},
+{ 
+"id":54,
+"kode":"SZ",
+"deskripsi":"Sheets, in bundle/bunch/truss",
+"deskripsi_pl":"Sheets, in bundle/bunch/truss"
+},
+{ 
+"id":55,
+"kode":"TB",
+"deskripsi":"Tub",
+"deskripsi_pl":"Tub"
+},
+{ 
+"id":56,
+"kode":"TK",
+"deskripsi":"Tank, rectangular",
+"deskripsi_pl":"Tank, rectangular"
+},
+{ 
+"id":57,
+"kode":"TN",
+"deskripsi":"Tin",
+"deskripsi_pl":"Tin"
+},
+{ 
+"id":58,
+"kode":"TP",
+"deskripsi":"Tray",
+"deskripsi_pl":"Tray"
+},
+{ 
+"id":59,
+"kode":"TU",
+"deskripsi":"Tube",
+"deskripsi_pl":"Tube"
+},
+{ 
+"id":60,
+"kode":"TY",
+"deskripsi":"Tank, cylindrical",
+"deskripsi_pl":"Tank, cylindrical"
+},
+{ 
+"id":61,
+"kode":"TZ",
+"deskripsi":"Tubes, in bundle/bunch/truss",
+"deskripsi_pl":"Tubes, in bundle/bunch/truss"
+},
+{ 
+"id":62,
+"kode":"VL",
+"deskripsi":"Bulk, liquid",
+"deskripsi_pl":"Bulk, liquid"
+},
+{ 
+"id":63,
+"kode":"VO",
+"deskripsi":"Bulk, solid, large particles (\"nodules\")",
+"deskripsi_pl":"Bulk, solid, large particles (\"nodules\")"
+},
+{ 
+"id":64,
+"kode":"VP",
+"deskripsi":"Vacuumpacked",
+"deskripsi_pl":"Vacuumpacked"
+},
+{ 
+"id":65,
+"kode":"VR",
+"deskripsi":"Bulk, solid, granular particles (\"grains\")",
+"deskripsi_pl":"Bulk, solid, granular particles (\"grains\")"
+},
+{ 
+"id":66,
+"kode":"VY",
+"deskripsi":"Bulk, solid, fine particles (\"powders\")",
+"deskripsi_pl":"Bulk, solid, fine particles (\"powders\")"
+},
+{ 
+"id":67,
+"kode":"1A",
+"deskripsi":"Drum, steel",
+"deskripsi_pl":"Drum, steel"
+},
+{ 
+"id":68,
+"kode":"1B",
+"deskripsi":"Drum, aluminium",
+"deskripsi_pl":"Drum, aluminium"
+},
+{ 
+"id":69,
+"kode":"1D",
+"deskripsi":"Drum, plywood",
+"deskripsi_pl":"Drum, plywood"
+},
+{ 
+"id":70,
+"kode":"1F",
+"deskripsi":"Container, flexible",
+"deskripsi_pl":"Container, flexible"
+},
+{ 
+"id":71,
+"kode":"1G",
+"deskripsi":"Drum, fibre",
+"deskripsi_pl":"Drum, fibre"
+},
+{ 
+"id":72,
+"kode":"1W",
+"deskripsi":"Drum, wooden",
+"deskripsi_pl":"Drum, wooden"
+},
+{ 
+"id":73,
+"kode":"2C",
+"deskripsi":"Barrel, wooden",
+"deskripsi_pl":"Barrel, wooden"
+},
+{ 
+"id":74,
+"kode":"3A",
+"deskripsi":"Jerrican, steel",
+"deskripsi_pl":"Jerrican, steel"
+},
+{ 
+"id":75,
+"kode":"3H",
+"deskripsi":"Jerrican, plastic",
+"deskripsi_pl":"Jerrican, plastic"
+},
+{ 
+"id":76,
+"kode":"43",
+"deskripsi":"Bag, super bulk",
+"deskripsi_pl":"Bag, super bulk"
+},
+{ 
+"id":77,
+"kode":"44",
+"deskripsi":"Bag, polybag",
+"deskripsi_pl":"Bag, polybag"
+},
+{ 
+"id":78,
+"kode":"4A",
+"deskripsi":"Box, steel",
+"deskripsi_pl":"Box, steel"
+},
+{ 
+"id":79,
+"kode":"4B",
+"deskripsi":"Box, aluminium",
+"deskripsi_pl":"Box, aluminium"
+},
+{ 
+"id":80,
+"kode":"4C",
+"deskripsi":"Box, natural wood",
+"deskripsi_pl":"Box, natural wood"
+},
+{ 
+"id":81,
+"kode":"4D",
+"deskripsi":"Box, plywood",
+"deskripsi_pl":"Box, plywood"
+},
+{ 
+"id":82,
+"kode":"4F",
+"deskripsi":"Box, reconstituted wood",
+"deskripsi_pl":"Box, reconstituted wood"
+},
+{ 
+"id":83,
+"kode":"4G",
+"deskripsi":"Box, fibreboard",
+"deskripsi_pl":"Box, fibreboard"
+},
+{ 
+"id":84,
+"kode":"4H",
+"deskripsi":"Box, plastic",
+"deskripsi_pl":"Box, plastic"
+},
+{ 
+"id":85,
+"kode":"5H",
+"deskripsi":"Bag, woven plastic",
+"deskripsi_pl":"Bag, woven plastic"
+},
+{ 
+"id":86,
+"kode":"5L",
+"deskripsi":"Bag, textile ",
+"deskripsi_pl":"Bag, textile "
+},
+{ 
+"id":87,
+"kode":"5M",
+"deskripsi":"Bag, paper ",
+"deskripsi_pl":"Bag, paper "
+},
+{ 
+"id":88,
+"kode":"6H",
+"deskripsi":"Composite packaging, plastic receptacle",
+"deskripsi_pl":"Composite packaging, plastic receptacle"
+},
+{ 
+"id":89,
+"kode":"6P",
+"deskripsi":"Composite packaging, glass receptacle",
+"deskripsi_pl":"Composite packaging, glass receptacle"
+},
+{ 
+"id":90,
+"kode":"7A",
+"deskripsi":"Case, car",
+"deskripsi_pl":"Case, car"
+},
+{ 
+"id":91,
+"kode":"7B",
+"deskripsi":"Case, wooden",
+"deskripsi_pl":"Case, wooden"
+},
+{ 
+"id":92,
+"kode":"8A",
+"deskripsi":"Pallet, wooden",
+"deskripsi_pl":"Pallet, wooden"
+},
+{ 
+"id":93,
+"kode":"8B",
+"deskripsi":"Crate, wooden",
+"deskripsi_pl":"Crate, wooden"
+},
+{ 
+"id":94,
+"kode":"8C",
+"deskripsi":"Bundle, wooden",
+"deskripsi_pl":"Bundle, wooden"
+},
+{ 
+"id":95,
+"kode":"AA",
+"deskripsi":"Intermediate bulk container, rigid plastic",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic"
+},
+{ 
+"id":96,
+"kode":"AB",
+"deskripsi":"Receptacle, fibre ",
+"deskripsi_pl":"Receptacle, fibre "
+},
+{ 
+"id":97,
+"kode":"AC",
+"deskripsi":"Receptacle, paper ",
+"deskripsi_pl":"Receptacle, paper "
+},
+{ 
+"id":98,
+"kode":"AD",
+"deskripsi":"Receptacle, wooden ",
+"deskripsi_pl":"Receptacle, wooden "
+},
+{ 
+"id":99,
+"kode":"AE",
+"deskripsi":"Aerosol",
+"deskripsi_pl":"Aerosol"
+},
+{ 
+"id":100,
+"kode":"AF",
+"deskripsi":"Pallet, modular, collars 80cms * 60cms ",
+"deskripsi_pl":"Pallet, modular, collars 80cms * 60cms "
+},
+{ 
+"id":101,
+"kode":"AG",
+"deskripsi":"Pallet, shrinkwrapped ",
+"deskripsi_pl":"Pallet, shrinkwrapped "
+},
+{ 
+"id":102,
+"kode":"AH",
+"deskripsi":"Pallet, 100cms * 110cms ",
+"deskripsi_pl":"Pallet, 100cms * 110cms "
+},
+{ 
+"id":103,
+"kode":"AI",
+"deskripsi":"Clamshell",
+"deskripsi_pl":"Clamshell"
+},
+{ 
+"id":104,
+"kode":"AJ",
+"deskripsi":"Cone",
+"deskripsi_pl":"Cone"
+},
+{ 
+"id":105,
+"kode":"AL",
+"deskripsi":"Ball",
+"deskripsi_pl":"Ball"
+},
+{ 
+"id":106,
+"kode":"AM",
+"deskripsi":"Ampoule, non-protected ",
+"deskripsi_pl":"Ampoule, non-protected "
+},
+{ 
+"id":107,
+"kode":"AP",
+"deskripsi":"Ampoule, protected ",
+"deskripsi_pl":"Ampoule, protected "
+},
+{ 
+"id":108,
+"kode":"AT",
+"deskripsi":"Atomizer ",
+"deskripsi_pl":"Atomizer "
+},
+{ 
+"id":109,
+"kode":"AV",
+"deskripsi":"Capsule",
+"deskripsi_pl":"Capsule"
+},
+{ 
+"id":110,
+"kode":"B4",
+"deskripsi":"Belt",
+"deskripsi_pl":"Belt"
+},
+{ 
+"id":111,
+"kode":"BA",
+"deskripsi":"Barrel ",
+"deskripsi_pl":"Barrel "
+},
+{ 
+"id":112,
+"kode":"BB",
+"deskripsi":"Bobbin ",
+"deskripsi_pl":"Bobbin "
+},
+{ 
+"id":113,
+"kode":"BC",
+"deskripsi":"Bottlecrate / bottlerack ",
+"deskripsi_pl":"Bottlecrate / bottlerack "
+},
+{ 
+"id":114,
+"kode":"BD",
+"deskripsi":"Board",
+"deskripsi_pl":"Board"
+},
+{ 
+"id":115,
+"kode":"BF",
+"deskripsi":"Balloon, non-protected ",
+"deskripsi_pl":"Balloon, non-protected "
+},
+{ 
+"id":116,
+"kode":"BH",
+"deskripsi":"Bunch",
+"deskripsi_pl":"Bunch"
+},
+{ 
+"id":117,
+"kode":"BI",
+"deskripsi":"Bin",
+"deskripsi_pl":"Bin"
+},
+{ 
+"id":118,
+"kode":"BJ",
+"deskripsi":"Bucket ",
+"deskripsi_pl":"Bucket "
+},
+{ 
+"id":119,
+"kode":"BM",
+"deskripsi":"Basin",
+"deskripsi_pl":"Basin"
+},
+{ 
+"id":120,
+"kode":"BN",
+"deskripsi":"Bale, non-compressed ",
+"deskripsi_pl":"Bale, non-compressed "
+},
+{ 
+"id":121,
+"kode":"BO",
+"deskripsi":"Bottle, non-protected, cylindrical ",
+"deskripsi_pl":"Bottle, non-protected, cylindrical "
+},
+{ 
+"id":122,
+"kode":"BP",
+"deskripsi":"Balloon, protected ",
+"deskripsi_pl":"Balloon, protected "
+},
+{ 
+"id":123,
+"kode":"BQ",
+"deskripsi":"Bottle, protected cylindrical",
+"deskripsi_pl":"Bottle, protected cylindrical"
+},
+{ 
+"id":124,
+"kode":"BR",
+"deskripsi":"Bar",
+"deskripsi_pl":"Bar"
+},
+{ 
+"id":125,
+"kode":"BS",
+"deskripsi":"Bottle, non-protected, bulbous ",
+"deskripsi_pl":"Bottle, non-protected, bulbous "
+},
+{ 
+"id":126,
+"kode":"BU",
+"deskripsi":"Butt ",
+"deskripsi_pl":"Butt "
+},
+{ 
+"id":127,
+"kode":"BV",
+"deskripsi":"Bottle, protected bulbous",
+"deskripsi_pl":"Bottle, protected bulbous"
+},
+{ 
+"id":128,
+"kode":"BW",
+"deskripsi":"Box, for liquids",
+"deskripsi_pl":"Box, for liquids"
+},
+{ 
+"id":129,
+"kode":"BY",
+"deskripsi":"Board, in bundle/bunch/truss ",
+"deskripsi_pl":"Board, in bundle/bunch/truss "
+},
+{ 
+"id":130,
+"kode":"BZ",
+"deskripsi":"Bars, in bundle/bunch/truss",
+"deskripsi_pl":"Bars, in bundle/bunch/truss"
+},
+{ 
+"id":131,
+"kode":"CB",
+"deskripsi":"Crate, beer",
+"deskripsi_pl":"Crate, beer"
+},
+{ 
+"id":132,
+"kode":"CC",
+"deskripsi":"Churn",
+"deskripsi_pl":"Churn"
+},
+{ 
+"id":133,
+"kode":"CD",
+"deskripsi":"Can, with handle and spout ",
+"deskripsi_pl":"Can, with handle and spout "
+},
+{ 
+"id":134,
+"kode":"CE",
+"deskripsi":"Creel",
+"deskripsi_pl":"Creel"
+},
+{ 
+"id":135,
+"kode":"CF",
+"deskripsi":"Coffer ",
+"deskripsi_pl":"Coffer "
+},
+{ 
+"id":136,
+"kode":"CH",
+"deskripsi":"Chest",
+"deskripsi_pl":"Chest"
+},
+{ 
+"id":137,
+"kode":"CI",
+"deskripsi":"Canister ",
+"deskripsi_pl":"Canister "
+},
+{ 
+"id":138,
+"kode":"CK",
+"deskripsi":"Cask ",
+"deskripsi_pl":"Cask "
+},
+{ 
+"id":139,
+"kode":"CM",
+"deskripsi":"Card",
+"deskripsi_pl":"Card"
+},
+{ 
+"id":140,
+"kode":"CN",
+"deskripsi":"Container, not otherwise specified as transpo",
+"deskripsi_pl":"Container, not otherwise specified as transpo"
+},
+{ 
+"id":141,
+"kode":"CP",
+"deskripsi":"Carboy, protected",
+"deskripsi_pl":"Carboy, protected"
+},
+{ 
+"id":142,
+"kode":"CQ",
+"deskripsi":"Cartridge",
+"deskripsi_pl":"Cartridge"
+},
+{ 
+"id":143,
+"kode":"CW",
+"deskripsi":"Cage, roll ",
+"deskripsi_pl":"Cage, roll "
+},
+{ 
+"id":144,
+"kode":"DA",
+"deskripsi":"Crate, multiple layer, plastic ",
+"deskripsi_pl":"Crate, multiple layer, plastic "
+},
+{ 
+"id":145,
+"kode":"DB",
+"deskripsi":"Crate, multiple layer, wooden",
+"deskripsi_pl":"Crate, multiple layer, wooden"
+},
+{ 
+"id":146,
+"kode":"DC",
+"deskripsi":"Crate, multiple layer, cardboard ",
+"deskripsi_pl":"Crate, multiple layer, cardboard "
+},
+{ 
+"id":147,
+"kode":"DG",
+"deskripsi":"Cage, Commonwealth Handling Equipment Pool  (",
+"deskripsi_pl":"Cage, Commonwealth Handling Equipment Pool  ("
+},
+{ 
+"id":148,
+"kode":"DH",
+"deskripsi":"Box, Commonwealth Handling Equipment Pool (CH",
+"deskripsi_pl":"Box, Commonwealth Handling Equipment Pool (CH"
+},
+{ 
+"id":149,
+"kode":"DI",
+"deskripsi":"Drum, iron ",
+"deskripsi_pl":"Drum, iron "
+},
+{ 
+"id":150,
+"kode":"DJ",
+"deskripsi":"Demijohn, non-protected",
+"deskripsi_pl":"Demijohn, non-protected"
+},
+{ 
+"id":151,
+"kode":"DK",
+"deskripsi":"Crate, bulk, cardboard ",
+"deskripsi_pl":"Crate, bulk, cardboard "
+},
+{ 
+"id":152,
+"kode":"DL",
+"deskripsi":"Crate, bulk, plastic ",
+"deskripsi_pl":"Crate, bulk, plastic "
+},
+{ 
+"id":153,
+"kode":"DM",
+"deskripsi":"Crate, bulk, wooden",
+"deskripsi_pl":"Crate, bulk, wooden"
+},
+{ 
+"id":154,
+"kode":"DN",
+"deskripsi":"Dispenser",
+"deskripsi_pl":"Dispenser"
+},
+{ 
+"id":155,
+"kode":"DP",
+"deskripsi":"Demijohn, protected",
+"deskripsi_pl":"Demijohn, protected"
+},
+{ 
+"id":156,
+"kode":"DS",
+"deskripsi":"Tray, one layer no cover, plastic",
+"deskripsi_pl":"Tray, one layer no cover, plastic"
+},
+{ 
+"id":157,
+"kode":"DT",
+"deskripsi":"Tray, one layer no cover, wooden ",
+"deskripsi_pl":"Tray, one layer no cover, wooden "
+},
+{ 
+"id":158,
+"kode":"DU",
+"deskripsi":"Tray, one layer no cover, polystyrene",
+"deskripsi_pl":"Tray, one layer no cover, polystyrene"
+},
+{ 
+"id":159,
+"kode":"DV",
+"deskripsi":"Tray, one layer no cover, cardboard",
+"deskripsi_pl":"Tray, one layer no cover, cardboard"
+},
+{ 
+"id":160,
+"kode":"DW",
+"deskripsi":"Tray, two layers no cover, plastic tray",
+"deskripsi_pl":"Tray, two layers no cover, plastic tray"
+},
+{ 
+"id":161,
+"kode":"DX",
+"deskripsi":"Tray, two layers no cover, wooden",
+"deskripsi_pl":"Tray, two layers no cover, wooden"
+},
+{ 
+"id":162,
+"kode":"DY",
+"deskripsi":"Tray, two layers no cover, cardboard ",
+"deskripsi_pl":"Tray, two layers no cover, cardboard "
+},
+{ 
+"id":163,
+"kode":"EC",
+"deskripsi":"Bag, plastic ",
+"deskripsi_pl":"Bag, plastic "
+},
+{ 
+"id":164,
+"kode":"ED",
+"deskripsi":"Case, with pallet base ",
+"deskripsi_pl":"Case, with pallet base "
+},
+{ 
+"id":165,
+"kode":"EE",
+"deskripsi":"Case, with pallet base, wooden ",
+"deskripsi_pl":"Case, with pallet base, wooden "
+},
+{ 
+"id":166,
+"kode":"EF",
+"deskripsi":"Case, with pallet base, cardboard",
+"deskripsi_pl":"Case, with pallet base, cardboard"
+},
+{ 
+"id":167,
+"kode":"EG",
+"deskripsi":"Case, with pallet base, plastic",
+"deskripsi_pl":"Case, with pallet base, plastic"
+},
+{ 
+"id":168,
+"kode":"EH",
+"deskripsi":"Case, with pallet base, metal",
+"deskripsi_pl":"Case, with pallet base, metal"
+},
+{ 
+"id":169,
+"kode":"EI",
+"deskripsi":"Case, isothermic ",
+"deskripsi_pl":"Case, isothermic "
+},
+{ 
+"id":170,
+"kode":"FB",
+"deskripsi":"Flexibag",
+"deskripsi_pl":"Flexibag"
+},
+{ 
+"id":171,
+"kode":"FC",
+"deskripsi":"Crate, fruit ",
+"deskripsi_pl":"Crate, fruit "
+},
+{ 
+"id":172,
+"kode":"FE",
+"deskripsi":"Flexitank",
+"deskripsi_pl":"Flexitank"
+},
+{ 
+"id":173,
+"kode":"FI",
+"deskripsi":"Firkin ",
+"deskripsi_pl":"Firkin "
+},
+{ 
+"id":174,
+"kode":"FL",
+"deskripsi":"Flask",
+"deskripsi_pl":"Flask"
+},
+{ 
+"id":175,
+"kode":"FO",
+"deskripsi":"Footlocker ",
+"deskripsi_pl":"Footlocker "
+},
+{ 
+"id":176,
+"kode":"FP",
+"deskripsi":"Filmpack ",
+"deskripsi_pl":"Filmpack "
+},
+{ 
+"id":177,
+"kode":"FT",
+"deskripsi":"Foodtainer",
+"deskripsi_pl":"Foodtainer"
+},
+{ 
+"id":178,
+"kode":"FW",
+"deskripsi":"Cart, flatbed",
+"deskripsi_pl":"Cart, flatbed"
+},
+{ 
+"id":179,
+"kode":"FX",
+"deskripsi":"Bag, flexible container",
+"deskripsi_pl":"Bag, flexible container"
+},
+{ 
+"id":180,
+"kode":"GB",
+"deskripsi":"Bottle, gas",
+"deskripsi_pl":"Bottle, gas"
+},
+{ 
+"id":181,
+"kode":"GI",
+"deskripsi":"Girder ",
+"deskripsi_pl":"Girder "
+},
+{ 
+"id":182,
+"kode":"GL",
+"deskripsi":"Container, gallon",
+"deskripsi_pl":"Container, gallon"
+},
+{ 
+"id":183,
+"kode":"GR",
+"deskripsi":"Receptacle, glass ",
+"deskripsi_pl":"Receptacle, glass "
+},
+{ 
+"id":184,
+"kode":"GU",
+"deskripsi":"Tray, containing horizontally stacked flat it",
+"deskripsi_pl":"Tray, containing horizontally stacked flat it"
+},
+{ 
+"id":185,
+"kode":"GY",
+"deskripsi":"Bag, gunny",
+"deskripsi_pl":"Bag, gunny"
+},
+{ 
+"id":186,
+"kode":"GZ",
+"deskripsi":"Girders, in bundle/bunch/truss ",
+"deskripsi_pl":"Girders, in bundle/bunch/truss "
+},
+{ 
+"id":187,
+"kode":"HA",
+"deskripsi":"Basket, with handle, plastic ",
+"deskripsi_pl":"Basket, with handle, plastic "
+},
+{ 
+"id":188,
+"kode":"HB",
+"deskripsi":"Basket, with handle, wooden",
+"deskripsi_pl":"Basket, with handle, wooden"
+},
+{ 
+"id":189,
+"kode":"HC",
+"deskripsi":"Basket, with handle, cardboard ",
+"deskripsi_pl":"Basket, with handle, cardboard "
+},
+{ 
+"id":190,
+"kode":"HG",
+"deskripsi":"Hogshead ",
+"deskripsi_pl":"Hogshead "
+},
+{ 
+"id":191,
+"kode":"HN",
+"deskripsi":"Hanger",
+"deskripsi_pl":"Hanger"
+},
+{ 
+"id":192,
+"kode":"HR",
+"deskripsi":"Hamper ",
+"deskripsi_pl":"Hamper "
+},
+{ 
+"id":193,
+"kode":"IA",
+"deskripsi":"Package, display, wooden ",
+"deskripsi_pl":"Package, display, wooden "
+},
+{ 
+"id":194,
+"kode":"IB",
+"deskripsi":"Package, display, cardboard",
+"deskripsi_pl":"Package, display, cardboard"
+},
+{ 
+"id":195,
+"kode":"IC",
+"deskripsi":"Package, display, plastic",
+"deskripsi_pl":"Package, display, plastic"
+},
+{ 
+"id":196,
+"kode":"ID",
+"deskripsi":"Package, display, metal",
+"deskripsi_pl":"Package, display, metal"
+},
+{ 
+"id":197,
+"kode":"IE",
+"deskripsi":"Package, show",
+"deskripsi_pl":"Package, show"
+},
+{ 
+"id":198,
+"kode":"IF",
+"deskripsi":"Package, flow ",
+"deskripsi_pl":"Package, flow "
+},
+{ 
+"id":199,
+"kode":"IG",
+"deskripsi":"Package, paper wrapped",
+"deskripsi_pl":"Package, paper wrapped"
+},
+{ 
+"id":200,
+"kode":"IH",
+"deskripsi":"Drum, plastic",
+"deskripsi_pl":"Drum, plastic"
+},
+{ 
+"id":201,
+"kode":"IK",
+"deskripsi":"Package, cardboard, with bottle grip-holes ",
+"deskripsi_pl":"Package, cardboard, with bottle grip-holes "
+},
+{ 
+"id":202,
+"kode":"IL",
+"deskripsi":"Tray, rigid, lidded stackable (CEN TS 14482:2",
+"deskripsi_pl":"Tray, rigid, lidded stackable (CEN TS 14482:2"
+},
+{ 
+"id":203,
+"kode":"IN",
+"deskripsi":"Ingot",
+"deskripsi_pl":"Ingot"
+},
+{ 
+"id":204,
+"kode":"IZ",
+"deskripsi":"Ingots, in bundle/bunch/truss",
+"deskripsi_pl":"Ingots, in bundle/bunch/truss"
+},
+{ 
+"id":205,
+"kode":"JB",
+"deskripsi":"Bag, jumbo",
+"deskripsi_pl":"Bag, jumbo"
+},
+{ 
+"id":206,
+"kode":"JT",
+"deskripsi":"Jutebag",
+"deskripsi_pl":"Jutebag"
+},
+{ 
+"id":207,
+"kode":"KG",
+"deskripsi":"Keg",
+"deskripsi_pl":"Keg"
+},
+{ 
+"id":208,
+"kode":"KI",
+"deskripsi":"Kit",
+"deskripsi_pl":"Kit"
+},
+{ 
+"id":209,
+"kode":"LE",
+"deskripsi":"Luggage",
+"deskripsi_pl":"Luggage"
+},
+{ 
+"id":210,
+"kode":"LG",
+"deskripsi":"Log",
+"deskripsi_pl":"Log"
+},
+{ 
+"id":211,
+"kode":"LT",
+"deskripsi":"Lot",
+"deskripsi_pl":"Lot"
+},
+{ 
+"id":212,
+"kode":"LU",
+"deskripsi":"Lug",
+"deskripsi_pl":"Lug"
+},
+{ 
+"id":213,
+"kode":"LV",
+"deskripsi":"Liftvan",
+"deskripsi_pl":"Liftvan"
+},
+{ 
+"id":214,
+"kode":"LZ",
+"deskripsi":"Logs, in bundle/bunch/truss",
+"deskripsi_pl":"Logs, in bundle/bunch/truss"
+},
+{ 
+"id":215,
+"kode":"MA",
+"deskripsi":"Crate, metal",
+"deskripsi_pl":"Crate, metal"
+},
+{ 
+"id":216,
+"kode":"ME",
+"deskripsi":"Container, metal",
+"deskripsi_pl":"Container, metal"
+},
+{ 
+"id":217,
+"kode":"MR",
+"deskripsi":"Receptacle, metal ",
+"deskripsi_pl":"Receptacle, metal "
+},
+{ 
+"id":218,
+"kode":"MS",
+"deskripsi":"Sack, multi-wall ",
+"deskripsi_pl":"Sack, multi-wall "
+},
+{ 
+"id":219,
+"kode":"MW",
+"deskripsi":"Receptacle, plastic wrapped ",
+"deskripsi_pl":"Receptacle, plastic wrapped "
+},
+{ 
+"id":220,
+"kode":"MX",
+"deskripsi":"Matchbox ",
+"deskripsi_pl":"Matchbox "
+},
+{ 
+"id":221,
+"kode":"NA",
+"deskripsi":"Not available",
+"deskripsi_pl":"Not available"
+},
+{ 
+"id":222,
+"kode":"NF",
+"deskripsi":"Unpacked or unpackaged, single unit",
+"deskripsi_pl":"Unpacked or unpackaged, single unit"
+},
+{ 
+"id":223,
+"kode":"NG",
+"deskripsi":"Unpacked or unpackaged, multiple units",
+"deskripsi_pl":"Unpacked or unpackaged, multiple units"
+},
+{ 
+"id":224,
+"kode":"NU",
+"deskripsi":"Net, tube, plastic ",
+"deskripsi_pl":"Net, tube, plastic "
+},
+{ 
+"id":225,
+"kode":"NV",
+"deskripsi":"Net, tube, textile ",
+"deskripsi_pl":"Net, tube, textile "
+},
+{ 
+"id":226,
+"kode":"OA",
+"deskripsi":"Pallet, CHEP 40 cm x 60 cm",
+"deskripsi_pl":"Pallet, CHEP 40 cm x 60 cm"
+},
+{ 
+"id":227,
+"kode":"OB",
+"deskripsi":"Pallet, CHEP 80 cm x 120 cm",
+"deskripsi_pl":"Pallet, CHEP 80 cm x 120 cm"
+},
+{ 
+"id":228,
+"kode":"OC",
+"deskripsi":"Pallet, CHEP 100 cm x 120 cm",
+"deskripsi_pl":"Pallet, CHEP 100 cm x 120 cm"
+},
+{ 
+"id":229,
+"kode":"OD",
+"deskripsi":"Pallet, AS 4068-1993",
+"deskripsi_pl":"Pallet, AS 4068-1993"
+},
+{ 
+"id":230,
+"kode":"OE",
+"deskripsi":"Pallet, ISO T11",
+"deskripsi_pl":"Pallet, ISO T11"
+},
+{ 
+"id":231,
+"kode":"OF",
+"deskripsi":"Platform, unspecified weight or dimension",
+"deskripsi_pl":"Platform, unspecified weight or dimension"
+},
+{ 
+"id":232,
+"kode":"OK",
+"deskripsi":"Block",
+"deskripsi_pl":"Block"
+},
+{ 
+"id":233,
+"kode":"OT",
+"deskripsi":"Octabin",
+"deskripsi_pl":"Octabin"
+},
+{ 
+"id":234,
+"kode":"OU",
+"deskripsi":"Container, outer",
+"deskripsi_pl":"Container, outer"
+},
+{ 
+"id":235,
+"kode":"OG",
+"deskripsi":"Pallet ISO 0 - 1/2 EURO Pallet",
+"deskripsi_pl":"Pallet ISO 0 - 1/2 EURO Pallet"
+},
+{ 
+"id":236,
+"kode":"OH",
+"deskripsi":"Pallet ISO 1 - 1/1 EURO Pallet",
+"deskripsi_pl":"Pallet ISO 1 - 1/1 EURO Pallet"
+},
+{ 
+"id":237,
+"kode":"OI",
+"deskripsi":"Pallet ISO 2 - 2/1 EURO Pallet",
+"deskripsi_pl":"Pallet ISO 2 - 2/1 EURO Pallet"
+},
+{ 
+"id":238,
+"kode":"OJ",
+"deskripsi":"1/4 EURO Pallet",
+"deskripsi_pl":"1/4 EURO Pallet"
+},
+{ 
+"id":239,
+"kode":"OL",
+"deskripsi":"1/8 EURO Pallet",
+"deskripsi_pl":"1/8 EURO Pallet"
+},
+{ 
+"id":240,
+"kode":"OM",
+"deskripsi":"Synthetic pallet ISO 1",
+"deskripsi_pl":"Synthetic pallet ISO 1"
+},
+{ 
+"id":241,
+"kode":"ON",
+"deskripsi":"Synthetic pallet ISO 2",
+"deskripsi_pl":"Synthetic pallet ISO 2"
+},
+{ 
+"id":242,
+"kode":"OP",
+"deskripsi":"Wholesaler pallet",
+"deskripsi_pl":"Wholesaler pallet"
+},
+{ 
+"id":243,
+"kode":"OQ",
+"deskripsi":"Pallet 80 X 100 cm",
+"deskripsi_pl":"Pallet 80 X 100 cm"
+},
+{ 
+"id":244,
+"kode":"OR",
+"deskripsi":"Pallet 60 X 100 cm",
+"deskripsi_pl":"Pallet 60 X 100 cm"
+},
+{ 
+"id":245,
+"kode":"OS",
+"deskripsi":"Oneway pallet",
+"deskripsi_pl":"Oneway pallet"
+},
+{ 
+"id":246,
+"kode":"OV",
+"deskripsi":"Returnable pallet",
+"deskripsi_pl":"Returnable pallet"
+},
+{ 
+"id":247,
+"kode":"OW",
+"deskripsi":"Large bag, pallet sized",
+"deskripsi_pl":"Large bag, pallet sized"
+},
+{ 
+"id":248,
+"kode":"OX",
+"deskripsi":"A wheeled pallet with raised rim (81 x 67 x 1",
+"deskripsi_pl":"A wheeled pallet with raised rim (81 x 67 x 1"
+},
+{ 
+"id":249,
+"kode":"OY",
+"deskripsi":"A Wheeled pallet with raised rim (81 x 72 x 1",
+"deskripsi_pl":"A Wheeled pallet with raised rim (81 x 72 x 1"
+},
+{ 
+"id":250,
+"kode":"OZ",
+"deskripsi":"Wheeled pallet with raised rim ( 81 x 60 x 16",
+"deskripsi_pl":"Wheeled pallet with raised rim ( 81 x 60 x 16"
+},
+{ 
+"id":251,
+"kode":"O1",
+"deskripsi":"Two sided cage on wheels with fixing strap",
+"deskripsi_pl":"Two sided cage on wheels with fixing strap"
+},
+{ 
+"id":252,
+"kode":"O2",
+"deskripsi":"Trolley",
+"deskripsi_pl":"Trolley"
+},
+{ 
+"id":253,
+"kode":"O3",
+"deskripsi":"Oneway pallet ISO 0 - 1/2 EURO Pallet",
+"deskripsi_pl":"Oneway pallet ISO 0 - 1/2 EURO Pallet"
+},
+{ 
+"id":254,
+"kode":"O4",
+"deskripsi":"Oneway pallet ISO 1 - 1/1 EURO Pallet",
+"deskripsi_pl":"Oneway pallet ISO 1 - 1/1 EURO Pallet"
+},
+{ 
+"id":255,
+"kode":"O5",
+"deskripsi":"Oneway pallet ISO 2 - 2/1 EURO Pallet",
+"deskripsi_pl":"Oneway pallet ISO 2 - 2/1 EURO Pallet"
+},
+{ 
+"id":256,
+"kode":"O6",
+"deskripsi":"Pallet with exceptional dimensions",
+"deskripsi_pl":"Pallet with exceptional dimensions"
+},
+{ 
+"id":257,
+"kode":"O7",
+"deskripsi":"Wooden pallet  40 cm x 80 cm",
+"deskripsi_pl":"Wooden pallet  40 cm x 80 cm"
+},
+{ 
+"id":258,
+"kode":"O8",
+"deskripsi":"Plastic pallet SRS 60 cm x 80 cm",
+"deskripsi_pl":"Plastic pallet SRS 60 cm x 80 cm"
+},
+{ 
+"id":259,
+"kode":"O9",
+"deskripsi":"Plastic pallet SRS 80 cm x 120 cm",
+"deskripsi_pl":"Plastic pallet SRS 80 cm x 120 cm"
+},
+{ 
+"id":260,
+"kode":"P1",
+"deskripsi":"CHEP pallet 60 cm x 80 cm ",
+"deskripsi_pl":"CHEP pallet 60 cm x 80 cm "
+},
+{ 
+"id":261,
+"kode":"P3",
+"deskripsi":"LPR pallet 60 cm x 80 cm",
+"deskripsi_pl":"LPR pallet 60 cm x 80 cm"
+},
+{ 
+"id":262,
+"kode":"P4",
+"deskripsi":"LPR pallet 80 cm x 120 cm",
+"deskripsi_pl":"LPR pallet 80 cm x 120 cm"
+},
+{ 
+"id":263,
+"kode":"P2",
+"deskripsi":"Pan",
+"deskripsi_pl":"Pan"
+},
+{ 
+"id":264,
+"kode":"PB",
+"deskripsi":"Pallet, box Combined open-ended box and palle",
+"deskripsi_pl":"Pallet, box Combined open-ended box and palle"
+},
+{ 
+"id":265,
+"kode":"PD",
+"deskripsi":"Pallet, modular, collars 80cms * 100cms ",
+"deskripsi_pl":"Pallet, modular, collars 80cms * 100cms "
+},
+{ 
+"id":266,
+"kode":"PE",
+"deskripsi":"Pallet, modular, collars 80cms * 120cms ",
+"deskripsi_pl":"Pallet, modular, collars 80cms * 120cms "
+},
+{ 
+"id":267,
+"kode":"PF",
+"deskripsi":"Pen ",
+"deskripsi_pl":"Pen "
+},
+{ 
+"id":268,
+"kode":"PJ",
+"deskripsi":"Punnet",
+"deskripsi_pl":"Punnet"
+},
+{ 
+"id":269,
+"kode":"PN",
+"deskripsi":"Plank",
+"deskripsi_pl":"Plank"
+},
+{ 
+"id":270,
+"kode":"PP",
+"deskripsi":"Piece",
+"deskripsi_pl":"Piece"
+},
+{ 
+"id":271,
+"kode":"PR",
+"deskripsi":"Receptacle, plastic ",
+"deskripsi_pl":"Receptacle, plastic "
+},
+{ 
+"id":272,
+"kode":"PU",
+"deskripsi":"Tray ",
+"deskripsi_pl":"Tray "
+},
+{ 
+"id":273,
+"kode":"PV",
+"deskripsi":"Pipes, in bundle/bunch/truss ",
+"deskripsi_pl":"Pipes, in bundle/bunch/truss "
+},
+{ 
+"id":274,
+"kode":"PX",
+"deskripsi":"Pallet ",
+"deskripsi_pl":"Pallet "
+},
+{ 
+"id":275,
+"kode":"PY",
+"deskripsi":"Plates, in bundle/bunch/truss",
+"deskripsi_pl":"Plates, in bundle/bunch/truss"
+},
+{ 
+"id":276,
+"kode":"PZ",
+"deskripsi":"Planks, in bundle/bunch/truss",
+"deskripsi_pl":"Planks, in bundle/bunch/truss"
+},
+{ 
+"id":277,
+"kode":"QA",
+"deskripsi":"Drum, steel, non-removable head",
+"deskripsi_pl":"Drum, steel, non-removable head"
+},
+{ 
+"id":278,
+"kode":"QB",
+"deskripsi":"Drum, steel, removable head",
+"deskripsi_pl":"Drum, steel, removable head"
+},
+{ 
+"id":279,
+"kode":"QC",
+"deskripsi":"Drum, aluminium, non-removable head",
+"deskripsi_pl":"Drum, aluminium, non-removable head"
+},
+{ 
+"id":280,
+"kode":"QD",
+"deskripsi":"Drum, aluminium, removable head",
+"deskripsi_pl":"Drum, aluminium, removable head"
+},
+{ 
+"id":281,
+"kode":"QF",
+"deskripsi":"Drum, plastic, non-removable head",
+"deskripsi_pl":"Drum, plastic, non-removable head"
+},
+{ 
+"id":282,
+"kode":"QG",
+"deskripsi":"Drum, plastic, removable head",
+"deskripsi_pl":"Drum, plastic, removable head"
+},
+{ 
+"id":283,
+"kode":"QH",
+"deskripsi":"Barrel, wooden, bung type",
+"deskripsi_pl":"Barrel, wooden, bung type"
+},
+{ 
+"id":284,
+"kode":"QJ",
+"deskripsi":"Barrel, wooden, removable head ",
+"deskripsi_pl":"Barrel, wooden, removable head "
+},
+{ 
+"id":285,
+"kode":"QK",
+"deskripsi":"Jerrican, steel, non-removable head",
+"deskripsi_pl":"Jerrican, steel, non-removable head"
+},
+{ 
+"id":286,
+"kode":"QL",
+"deskripsi":"Jerrican, steel, removable head",
+"deskripsi_pl":"Jerrican, steel, removable head"
+},
+{ 
+"id":287,
+"kode":"QM",
+"deskripsi":"Jerrican, plastic, non-removable head",
+"deskripsi_pl":"Jerrican, plastic, non-removable head"
+},
+{ 
+"id":288,
+"kode":"QN",
+"deskripsi":"Jerrican, plastic, removable head",
+"deskripsi_pl":"Jerrican, plastic, removable head"
+},
+{ 
+"id":289,
+"kode":"QP",
+"deskripsi":"Box, wooden, natural wood, ordinary",
+"deskripsi_pl":"Box, wooden, natural wood, ordinary"
+},
+{ 
+"id":290,
+"kode":"QQ",
+"deskripsi":"Box, wooden, natural wood, with sift proof wa",
+"deskripsi_pl":"Box, wooden, natural wood, with sift proof wa"
+},
+{ 
+"id":291,
+"kode":"QR",
+"deskripsi":"Box, plastic, expanded ",
+"deskripsi_pl":"Box, plastic, expanded "
+},
+{ 
+"id":292,
+"kode":"QS",
+"deskripsi":"Box, plastic, solid",
+"deskripsi_pl":"Box, plastic, solid"
+},
+{ 
+"id":293,
+"kode":"RD",
+"deskripsi":"Rod",
+"deskripsi_pl":"Rod"
+},
+{ 
+"id":294,
+"kode":"RJ",
+"deskripsi":"Rack, clothing hanger",
+"deskripsi_pl":"Rack, clothing hanger"
+},
+{ 
+"id":295,
+"kode":"RK",
+"deskripsi":"Rack ",
+"deskripsi_pl":"Rack "
+},
+{ 
+"id":296,
+"kode":"RL",
+"deskripsi":"Reel ",
+"deskripsi_pl":"Reel "
+},
+{ 
+"id":297,
+"kode":"RT",
+"deskripsi":"Rednet ",
+"deskripsi_pl":"Rednet "
+},
+{ 
+"id":298,
+"kode":"RZ",
+"deskripsi":"Rods, in bundle/bunch/truss",
+"deskripsi_pl":"Rods, in bundle/bunch/truss"
+},
+{ 
+"id":299,
+"kode":"SB",
+"deskripsi":"Slab",
+"deskripsi_pl":"Slab"
+},
+{ 
+"id":300,
+"kode":"SC",
+"deskripsi":"Crate, shallow ",
+"deskripsi_pl":"Crate, shallow "
+},
+{ 
+"id":301,
+"kode":"SD",
+"deskripsi":"Spindle",
+"deskripsi_pl":"Spindle"
+},
+{ 
+"id":302,
+"kode":"SE",
+"deskripsi":"Sea-chest",
+"deskripsi_pl":"Sea-chest"
+},
+{ 
+"id":303,
+"kode":"SI",
+"deskripsi":"Skid ",
+"deskripsi_pl":"Skid "
+},
+{ 
+"id":304,
+"kode":"SL",
+"deskripsi":"Slipsheet ",
+"deskripsi_pl":"Slipsheet "
+},
+{ 
+"id":305,
+"kode":"SM",
+"deskripsi":"Sheetmetal ",
+"deskripsi_pl":"Sheetmetal "
+},
+{ 
+"id":306,
+"kode":"SO",
+"deskripsi":"Spool ",
+"deskripsi_pl":"Spool "
+},
+{ 
+"id":307,
+"kode":"SP",
+"deskripsi":"Sheet, plastic wrapping",
+"deskripsi_pl":"Sheet, plastic wrapping"
+},
+{ 
+"id":308,
+"kode":"SV",
+"deskripsi":"Envelope, steel",
+"deskripsi_pl":"Envelope, steel"
+},
+{ 
+"id":309,
+"kode":"SW",
+"deskripsi":"Shrinkwrapped  ",
+"deskripsi_pl":"Shrinkwrapped  "
+},
+{ 
+"id":310,
+"kode":"SX",
+"deskripsi":"Set",
+"deskripsi_pl":"Set"
+},
+{ 
+"id":311,
+"kode":"SY",
+"deskripsi":"Sleeve",
+"deskripsi_pl":"Sleeve"
+},
+{ 
+"id":312,
+"kode":"T1",
+"deskripsi":"Tablet",
+"deskripsi_pl":"Tablet"
+},
+{ 
+"id":313,
+"kode":"TC",
+"deskripsi":"Tea-chest",
+"deskripsi_pl":"Tea-chest"
+},
+{ 
+"id":314,
+"kode":"TD",
+"deskripsi":"Tube, collapsible",
+"deskripsi_pl":"Tube, collapsible"
+},
+{ 
+"id":315,
+"kode":"TE",
+"deskripsi":"Tyre",
+"deskripsi_pl":"Tyre"
+},
+{ 
+"id":316,
+"kode":"TG",
+"deskripsi":"Tank container, generic",
+"deskripsi_pl":"Tank container, generic"
+},
+{ 
+"id":317,
+"kode":"TI",
+"deskripsi":"Tierce",
+"deskripsi_pl":"Tierce"
+},
+{ 
+"id":318,
+"kode":"TL",
+"deskripsi":"Tub, with lid",
+"deskripsi_pl":"Tub, with lid"
+},
+{ 
+"id":319,
+"kode":"TO",
+"deskripsi":"Tun",
+"deskripsi_pl":"Tun"
+},
+{ 
+"id":320,
+"kode":"TR",
+"deskripsi":"Trunk",
+"deskripsi_pl":"Trunk"
+},
+{ 
+"id":321,
+"kode":"TS",
+"deskripsi":"Truss",
+"deskripsi_pl":"Truss"
+},
+{ 
+"id":322,
+"kode":"TT",
+"deskripsi":"Bag, tote",
+"deskripsi_pl":"Bag, tote"
+},
+{ 
+"id":323,
+"kode":"TV",
+"deskripsi":"Tube, with nozzle ",
+"deskripsi_pl":"Tube, with nozzle "
+},
+{ 
+"id":324,
+"kode":"TW",
+"deskripsi":"Pallet, triwall",
+"deskripsi_pl":"Pallet, triwall"
+},
+{ 
+"id":325,
+"kode":"UC",
+"deskripsi":"Uncaged ",
+"deskripsi_pl":"Uncaged "
+},
+{ 
+"id":326,
+"kode":"UN",
+"deskripsi":"Unit",
+"deskripsi_pl":"Unit"
+},
+{ 
+"id":327,
+"kode":"VA",
+"deskripsi":"Vat",
+"deskripsi_pl":"Vat"
+},
+{ 
+"id":328,
+"kode":"VG",
+"deskripsi":"Bulk, gas (at 1031 mbar and 15C)",
+"deskripsi_pl":"Bulk, gas (at 1031 mbar and 15C)"
+},
+{ 
+"id":329,
+"kode":"VI",
+"deskripsi":"Vial ",
+"deskripsi_pl":"Vial "
+},
+{ 
+"id":330,
+"kode":"VK",
+"deskripsi":"Vanpack ",
+"deskripsi_pl":"Vanpack "
+},
+{ 
+"id":331,
+"kode":"VQ",
+"deskripsi":"Bulk, liquefied gas (at abnormal temperature/",
+"deskripsi_pl":"Bulk, liquefied gas (at abnormal temperature/"
+},
+{ 
+"id":332,
+"kode":"VN",
+"deskripsi":"Vehicle",
+"deskripsi_pl":"Vehicle"
+},
+{ 
+"id":333,
+"kode":"VS",
+"deskripsi":"Bulk, scrap metal",
+"deskripsi_pl":"Bulk, scrap metal"
+},
+{ 
+"id":334,
+"kode":"WA",
+"deskripsi":"Intermediate bulk container",
+"deskripsi_pl":"Intermediate bulk container"
+},
+{ 
+"id":335,
+"kode":"WB",
+"deskripsi":"Wickerbottle ",
+"deskripsi_pl":"Wickerbottle "
+},
+{ 
+"id":336,
+"kode":"WC",
+"deskripsi":"Intermediate bulk container, steel ",
+"deskripsi_pl":"Intermediate bulk container, steel "
+},
+{ 
+"id":337,
+"kode":"WD",
+"deskripsi":"Intermediate bulk container, aluminium ",
+"deskripsi_pl":"Intermediate bulk container, aluminium "
+},
+{ 
+"id":338,
+"kode":"WF",
+"deskripsi":"Intermediate bulk container, metal ",
+"deskripsi_pl":"Intermediate bulk container, metal "
+},
+{ 
+"id":339,
+"kode":"WG",
+"deskripsi":"Intermediate bulk container, steel, pressuris",
+"deskripsi_pl":"Intermediate bulk container, steel, pressuris"
+},
+{ 
+"id":340,
+"kode":"WH",
+"deskripsi":"Intermediate bulk container, aluminium, press",
+"deskripsi_pl":"Intermediate bulk container, aluminium, press"
+},
+{ 
+"id":341,
+"kode":"WJ",
+"deskripsi":"Intermediate bulk container, metal, pressure ",
+"deskripsi_pl":"Intermediate bulk container, metal, pressure "
+},
+{ 
+"id":342,
+"kode":"WK",
+"deskripsi":"Intermediate bulk container, steel, liquid ",
+"deskripsi_pl":"Intermediate bulk container, steel, liquid "
+},
+{ 
+"id":343,
+"kode":"WL",
+"deskripsi":"Intermediate bulk container, aluminium, liqui",
+"deskripsi_pl":"Intermediate bulk container, aluminium, liqui"
+},
+{ 
+"id":344,
+"kode":"WM",
+"deskripsi":"Intermediate bulk container, metal, liquid ",
+"deskripsi_pl":"Intermediate bulk container, metal, liquid "
+},
+{ 
+"id":345,
+"kode":"WN",
+"deskripsi":"Intermediate bulk container, woven plastic, w",
+"deskripsi_pl":"Intermediate bulk container, woven plastic, w"
+},
+{ 
+"id":346,
+"kode":"WP",
+"deskripsi":"Intermediate bulk container, woven plastic, c",
+"deskripsi_pl":"Intermediate bulk container, woven plastic, c"
+},
+{ 
+"id":347,
+"kode":"WQ",
+"deskripsi":"Intermediate bulk container, woven plastic, w",
+"deskripsi_pl":"Intermediate bulk container, woven plastic, w"
+},
+{ 
+"id":348,
+"kode":"WR",
+"deskripsi":"Intermediate bulk container, woven plastic, c",
+"deskripsi_pl":"Intermediate bulk container, woven plastic, c"
+},
+{ 
+"id":349,
+"kode":"WS",
+"deskripsi":"Intermediate bulk container, plastic film",
+"deskripsi_pl":"Intermediate bulk container, plastic film"
+},
+{ 
+"id":350,
+"kode":"WT",
+"deskripsi":"Intermediate bulk container, textile with out",
+"deskripsi_pl":"Intermediate bulk container, textile with out"
+},
+{ 
+"id":351,
+"kode":"WU",
+"deskripsi":"Intermediate bulk container, natural wood, wi",
+"deskripsi_pl":"Intermediate bulk container, natural wood, wi"
+},
+{ 
+"id":352,
+"kode":"WV",
+"deskripsi":"Intermediate bulk container, textile, coated ",
+"deskripsi_pl":"Intermediate bulk container, textile, coated "
+},
+{ 
+"id":353,
+"kode":"WW",
+"deskripsi":"Intermediate bulk container, textile, with li",
+"deskripsi_pl":"Intermediate bulk container, textile, with li"
+},
+{ 
+"id":354,
+"kode":"WX",
+"deskripsi":"Intermediate bulk container, textile, coated ",
+"deskripsi_pl":"Intermediate bulk container, textile, coated "
+},
+{ 
+"id":355,
+"kode":"WY",
+"deskripsi":"Intermediate bulk container, plywood, with in",
+"deskripsi_pl":"Intermediate bulk container, plywood, with in"
+},
+{ 
+"id":356,
+"kode":"WZ",
+"deskripsi":"Intermediate bulk container, reconstituted wo",
+"deskripsi_pl":"Intermediate bulk container, reconstituted wo"
+},
+{ 
+"id":357,
+"kode":"XA",
+"deskripsi":"Bag, woven plastic, without inner coat/liner ",
+"deskripsi_pl":"Bag, woven plastic, without inner coat/liner "
+},
+{ 
+"id":358,
+"kode":"XB",
+"deskripsi":"Bag, woven plastic, sift proof ",
+"deskripsi_pl":"Bag, woven plastic, sift proof "
+},
+{ 
+"id":359,
+"kode":"XC",
+"deskripsi":"Bag, woven plastic, water resistant",
+"deskripsi_pl":"Bag, woven plastic, water resistant"
+},
+{ 
+"id":360,
+"kode":"XD",
+"deskripsi":"Bag, plastics film ",
+"deskripsi_pl":"Bag, plastics film "
+},
+{ 
+"id":361,
+"kode":"XF",
+"deskripsi":"Bag, textile, without inner coat/liner ",
+"deskripsi_pl":"Bag, textile, without inner coat/liner "
+},
+{ 
+"id":362,
+"kode":"XG",
+"deskripsi":"Bag, textile, sift proof ",
+"deskripsi_pl":"Bag, textile, sift proof "
+},
+{ 
+"id":363,
+"kode":"XH",
+"deskripsi":"Bag, textile, water resistant",
+"deskripsi_pl":"Bag, textile, water resistant"
+},
+{ 
+"id":364,
+"kode":"XJ",
+"deskripsi":"Bag, paper, multi-wall ",
+"deskripsi_pl":"Bag, paper, multi-wall "
+},
+{ 
+"id":365,
+"kode":"XK",
+"deskripsi":"Bag, paper, multi-wall, water resistant",
+"deskripsi_pl":"Bag, paper, multi-wall, water resistant"
+},
+{ 
+"id":366,
+"kode":"YA",
+"deskripsi":"Composite packaging, plastic receptacle in st",
+"deskripsi_pl":"Composite packaging, plastic receptacle in st"
+},
+{ 
+"id":367,
+"kode":"YB",
+"deskripsi":"Composite packaging, plastic receptacle in st",
+"deskripsi_pl":"Composite packaging, plastic receptacle in st"
+},
+{ 
+"id":368,
+"kode":"YC",
+"deskripsi":"Composite packaging, plastic receptacle in al",
+"deskripsi_pl":"Composite packaging, plastic receptacle in al"
+},
+{ 
+"id":369,
+"kode":"YD",
+"deskripsi":"Composite packaging, plastic receptacle in al",
+"deskripsi_pl":"Composite packaging, plastic receptacle in al"
+},
+{ 
+"id":370,
+"kode":"YF",
+"deskripsi":"Composite packaging, plastic receptacle in wo",
+"deskripsi_pl":"Composite packaging, plastic receptacle in wo"
+},
+{ 
+"id":371,
+"kode":"YG",
+"deskripsi":"Composite packaging, plastic receptacle in pl",
+"deskripsi_pl":"Composite packaging, plastic receptacle in pl"
+},
+{ 
+"id":372,
+"kode":"YH",
+"deskripsi":"Composite packaging, plastic receptacle in pl",
+"deskripsi_pl":"Composite packaging, plastic receptacle in pl"
+},
+{ 
+"id":373,
+"kode":"YJ",
+"deskripsi":"Composite packaging, plastic receptacle in fi",
+"deskripsi_pl":"Composite packaging, plastic receptacle in fi"
+},
+{ 
+"id":374,
+"kode":"YK",
+"deskripsi":"Composite packaging, plastic receptacle in fi",
+"deskripsi_pl":"Composite packaging, plastic receptacle in fi"
+},
+{ 
+"id":375,
+"kode":"YL",
+"deskripsi":"Composite packaging, plastic receptacle in pl",
+"deskripsi_pl":"Composite packaging, plastic receptacle in pl"
+},
+{ 
+"id":376,
+"kode":"YM",
+"deskripsi":"Composite packaging, plastic receptacle in so",
+"deskripsi_pl":"Composite packaging, plastic receptacle in so"
+},
+{ 
+"id":377,
+"kode":"YN",
+"deskripsi":"Composite packaging, glass receptacle in stee",
+"deskripsi_pl":"Composite packaging, glass receptacle in stee"
+},
+{ 
+"id":378,
+"kode":"YP",
+"deskripsi":"Composite packaging, glass receptacle in stee",
+"deskripsi_pl":"Composite packaging, glass receptacle in stee"
+},
+{ 
+"id":379,
+"kode":"YQ",
+"deskripsi":"Composite packaging, glass receptacle in alum",
+"deskripsi_pl":"Composite packaging, glass receptacle in alum"
+},
+{ 
+"id":380,
+"kode":"YR",
+"deskripsi":"Composite packaging, glass receptacle in alum",
+"deskripsi_pl":"Composite packaging, glass receptacle in alum"
+},
+{ 
+"id":381,
+"kode":"YS",
+"deskripsi":"Composite packaging, glass receptacle in wood",
+"deskripsi_pl":"Composite packaging, glass receptacle in wood"
+},
+{ 
+"id":382,
+"kode":"YT",
+"deskripsi":"Composite packaging, glass receptacle in plyw",
+"deskripsi_pl":"Composite packaging, glass receptacle in plyw"
+},
+{ 
+"id":383,
+"kode":"YV",
+"deskripsi":"Composite packaging, glass receptacle in wick",
+"deskripsi_pl":"Composite packaging, glass receptacle in wick"
+},
+{ 
+"id":384,
+"kode":"YW",
+"deskripsi":"Composite packaging, glass receptacle in fibr",
+"deskripsi_pl":"Composite packaging, glass receptacle in fibr"
+},
+{ 
+"id":385,
+"kode":"YX",
+"deskripsi":"Composite packaging, glass receptacle in fibr",
+"deskripsi_pl":"Composite packaging, glass receptacle in fibr"
+},
+{ 
+"id":386,
+"kode":"YY",
+"deskripsi":"Composite packaging, glass receptacle in expa",
+"deskripsi_pl":"Composite packaging, glass receptacle in expa"
+},
+{ 
+"id":387,
+"kode":"YZ",
+"deskripsi":"Composite packaging, glass receptacle in soli",
+"deskripsi_pl":"Composite packaging, glass receptacle in soli"
+},
+{ 
+"id":388,
+"kode":"ZA",
+"deskripsi":"Intermediate bulk container, paper, multi-wal",
+"deskripsi_pl":"Intermediate bulk container, paper, multi-wal"
+},
+{ 
+"id":389,
+"kode":"ZB",
+"deskripsi":"Bag, large ",
+"deskripsi_pl":"Bag, large "
+},
+{ 
+"id":390,
+"kode":"ZC",
+"deskripsi":"Intermediate bulk container, paper, multi-wal",
+"deskripsi_pl":"Intermediate bulk container, paper, multi-wal"
+},
+{ 
+"id":391,
+"kode":"ZD",
+"deskripsi":"Intermediate bulk container, rigid plastic, w",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic, w"
+},
+{ 
+"id":392,
+"kode":"ZF",
+"deskripsi":"Intermediate bulk container, rigid plastic, f",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic, f"
+},
+{ 
+"id":393,
+"kode":"ZG",
+"deskripsi":"Intermediate bulk container, rigid plastic, w",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic, w"
+},
+{ 
+"id":394,
+"kode":"ZH",
+"deskripsi":"Intermediate bulk container, rigid plastic, f",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic, f"
+},
+{ 
+"id":395,
+"kode":"ZJ",
+"deskripsi":"Intermediate bulk container, rigid plastic, w",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic, w"
+},
+{ 
+"id":396,
+"kode":"ZK",
+"deskripsi":"Intermediate bulk container, rigid plastic, f",
+"deskripsi_pl":"Intermediate bulk container, rigid plastic, f"
+},
+{ 
+"id":397,
+"kode":"ZL",
+"deskripsi":"Intermediate bulk container, composite, rigid",
+"deskripsi_pl":"Intermediate bulk container, composite, rigid"
+},
+{ 
+"id":398,
+"kode":"ZM",
+"deskripsi":"Intermediate bulk container, composite, flexi",
+"deskripsi_pl":"Intermediate bulk container, composite, flexi"
+},
+{ 
+"id":399,
+"kode":"ZN",
+"deskripsi":"Intermediate bulk container, composite, rigid",
+"deskripsi_pl":"Intermediate bulk container, composite, rigid"
+},
+{ 
+"id":400,
+"kode":"ZP",
+"deskripsi":"Intermediate bulk container, composite, flexi",
+"deskripsi_pl":"Intermediate bulk container, composite, flexi"
+},
+{ 
+"id":401,
+"kode":"ZQ",
+"deskripsi":"Intermediate bulk container, composite, rigid",
+"deskripsi_pl":"Intermediate bulk container, composite, rigid"
+},
+{ 
+"id":402,
+"kode":"ZR",
+"deskripsi":"Intermediate bulk container, composite, flexi",
+"deskripsi_pl":"Intermediate bulk container, composite, flexi"
+},
+{ 
+"id":403,
+"kode":"ZS",
+"deskripsi":"Intermediate bulk container, composite",
+"deskripsi_pl":"Intermediate bulk container, composite"
+},
+{ 
+"id":404,
+"kode":"ZT",
+"deskripsi":"Intermediate bulk container, fibreboard",
+"deskripsi_pl":"Intermediate bulk container, fibreboard"
+},
+{ 
+"id":405,
+"kode":"ZU",
+"deskripsi":"Intermediate bulk container, flexible",
+"deskripsi_pl":"Intermediate bulk container, flexible"
+},
+{ 
+"id":406,
+"kode":"ZV",
+"deskripsi":"Intermediate bulk container, metal, other tha",
+"deskripsi_pl":"Intermediate bulk container, metal, other tha"
+},
+{ 
+"id":407,
+"kode":"ZW",
+"deskripsi":"Intermediate bulk container, natural wood",
+"deskripsi_pl":"Intermediate bulk container, natural wood"
+},
+{ 
+"id":408,
+"kode":"ZX",
+"deskripsi":"Intermediate bulk container, plywood",
+"deskripsi_pl":"Intermediate bulk container, plywood"
+},
+{ 
+"id":409,
+"kode":"ZY",
+"deskripsi":"Intermediate bulk container, reconstituted wo",
+"deskripsi_pl":"Intermediate bulk container, reconstituted wo"
+},
+{ 
+"id":410,
+"kode":"ZZ",
+"deskripsi":"Mutually defined",
+"deskripsi_pl":"Mutually defined"
+}]

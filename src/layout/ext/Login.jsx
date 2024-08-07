@@ -4,7 +4,8 @@ import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom'
 // import { IoMdSync } from "react-icons/io";
 import { MdOutlineSync } from "react-icons/md";
-import { HiInformationCircle } from "react-icons/hi";
+import { HiInformationCircle } from "react-icons/hi"
+import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 // import { CSSTransition } from 'react-transition-group'
 import LogoBarantin from '../../assets/logo/logo_barantin.png'
 import BarantinTulisan from '../../assets/logo/barantin_tulisan_putih.png'
@@ -17,7 +18,10 @@ import c6 from '../../assets/captcha/6.jpg'
 import c7 from '../../assets/captcha/7.jpg'
 import c8 from '../../assets/captcha/8.jpg'
 import c9 from '../../assets/captcha/9.jpg'
+import UserEksModel from '../../model/UserEksModel';
 import("./styleLogin.css")
+
+const modelUser = new UserEksModel()
 
 const rand = arr => arr[Math.floor(Math.random() * arr.length)]
 
@@ -35,6 +39,7 @@ function randomText(length) {
 
 function Login() {
     let [alert, setAlert] = useState("")
+    let [loading, setLoading] = useState(false)
     let [textCapt, setTextCapt] = useState({
         img: undefined,
         text: "",
@@ -61,15 +66,42 @@ function Login() {
 
     const {
         register,
-        control,
-        setValue,
-        watch,
         handleSubmit,
         formState: { errors },
     } = useForm()
 
     const onSubmit = values => {
         if(values.captcha == textCapt.text) {
+            setLoading(true)
+            const response = modelUser.login(values)
+            response
+            .then((response) => {
+                setLoading(false)
+                if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                    console.log(response)
+                }
+                setAlert(values => ({
+                    ...values,
+                    status: response?.data?.status,
+                    pesan: response?.data?.message,
+                }));
+                localStorage.setItem("expired", JSON.stringify(response?.data?.expired))
+                localStorage.setItem("userEks", JSON.stringify(response?.data?.data))
+                setTimeout(() => {
+                    window.location.reload();
+                }, 800)
+            })
+            .catch((error) => {
+                if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                    console.log(error)
+                }
+                setLoading(false)
+                setAlert(values => ({
+                    ...values,
+                    status: error?.response?.data?.status || false,
+                    pesan: error?.response?.data?.message || 'Failed to login, please try again',
+                }));
+            })
         } else {
             setAlert('Captcha tidak sama!')
         }
@@ -120,9 +152,9 @@ function Login() {
                           <form onSubmit={handleSubmit(onSubmit)}>
                             <div>
                                   {alert ? 
-                                      <Alert color="failure" icon={HiInformationCircle}>
-                                          <span className="font-medium">{alert}</span>
-                                  </Alert>
+                                      <Alert className='mt-4' color={alert?.status ? "success" : "failure"} icon={alert?.status ? IoMdCheckmarkCircleOutline : HiInformationCircle}>
+                                          <span className="font-medium">{alert?.pesan}</span>
+                                      </Alert>
                                   : ""}
                             </div>
                               <div>
@@ -136,7 +168,7 @@ function Login() {
                                               {errors.email && <span className="font-medium">{errors.email.message}</span>}
                                           </>
                                       }
-                                      type='email' name='email' id="email" placeholder="example@example.com" color={errors.email ? "failure" : ""} />
+                                      type='email' autoComplete='off' name='email' id="email" placeholder="example@example.com" color={errors.email ? "failure" : ""} />
                               </div>
 
                               <div className="mt-6">
@@ -153,8 +185,7 @@ function Login() {
                                                   {errors.password && <span className="font-medium">{errors.password.message}</span>}
                                               </>
                                           }
-                                          type='password' name='password' id="password" placeholder="Your Password.." color={errors.password ? "failure" : ""} />
-
+                                        type='password' autoComplete='off' name='password' id="password" placeholder="Your Password.." color={errors.password ? "failure" : ""} />
                               </div>
                               <div>
                                 <div className="flex">
@@ -190,7 +221,7 @@ function Login() {
                               </div>
 
                               <div className="mt-6">
-                                  <Button type='submit' gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>Sign Up</Button>
+                                  <Button type={loading ? 'button' : 'submit'} disabled={loading} gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>{loading ? <Spinner aria-label="Default status example" /> : 'Sign Up'}</Button>
 
                                   {/* <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                                       Sign in

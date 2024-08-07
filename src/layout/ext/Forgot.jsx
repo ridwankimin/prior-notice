@@ -1,12 +1,16 @@
-import { Button, Label, TextInput } from 'flowbite-react'
-import React from 'react'
+import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react'
+import React, { useState } from 'react'
 import LogoBarantin from '../../assets/logo/logo_barantin.png'
+import { HiInformationCircle } from "react-icons/hi"
+import { IoMdCheckmarkCircleOutline } from "react-icons/io"
 import UserEksModel from '../../model/UserEksModel'
 import { useForm } from 'react-hook-form'
 
 const modelUser = new UserEksModel()
 
 function Forgot() {
+    let [loading, setLoading] = useState(false)
+    let [alert, setAlert] = useState("")
     const {
         register,
         handleSubmit,
@@ -14,12 +18,25 @@ function Forgot() {
     } = useForm()
 
     const onSubmit = (values) => {
+        setLoading(true)
         const response = modelUser.forgot(values)
         response
             .then((response) => {
+                setLoading(false)
+                setAlert(values => ({
+                    ...values,
+                    status: response?.data?.status,
+                    pesan: response?.data?.message,
+                }));
                 console.log(response)
             })
             .catch((error) => {
+                setLoading(false)
+                setAlert(values => ({
+                    ...values,
+                    status: error?.response?.data?.status || false,
+                    pesan: error?.response?.data?.message || 'Registration failed',
+                }));
                 console.log(error)
             })
     }
@@ -35,6 +52,12 @@ function Forgot() {
               <h1 className="mt-4 text-2xl font-semibold tracking-wide text-center text-gray-800 capitalize md:text-3xl dark:text-white">
                   Forgot Password
               </h1>
+
+              {alert ?
+                  <Alert className='mt-4' color={alert?.status ? "success" : "failure"} icon={alert?.status ? IoMdCheckmarkCircleOutline : HiInformationCircle}>
+                      <span className="font-medium">{alert?.pesan}</span>
+                  </Alert>
+                  : ""}
 
               <div className="w-full max-w-md mx-auto mt-6">
                   <form onSubmit={handleSubmit(onSubmit)}>
@@ -53,10 +76,10 @@ function Forgot() {
                                       {errors.email && <span className="font-medium">{errors.email.message}</span>}
                                   </>
                               }
-                              type='email' id="email" name='email' placeholder="John" color={errors.email ? "failure" : ""} />
+                              type='email' id="email" name='email' color={errors.email ? "failure" : ""} />
                       </div>
 
-                      <Button type='submit' gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>Reset Password</Button>
+                      <Button type={loading ? 'button' : 'submit'} disabled={loading} gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>{loading ? <Spinner aria-label="Default status example" /> : 'Reset Password'}</Button>
                   </form>
               </div>
           </div>
