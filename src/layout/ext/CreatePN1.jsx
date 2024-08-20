@@ -1,6 +1,6 @@
 import { Button, Card, Label, Radio, Spinner, Table, TextInput, Textarea } from 'flowbite-react'
 import React, { useCallback, useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form';
+import { Controller, useForm } from 'react-hook-form';
 import { IoSend, IoSave, IoPrint } from "react-icons/io5";
 import { CiCirclePlus } from "react-icons/ci";
 import { FaEdit } from "react-icons/fa";
@@ -16,10 +16,68 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Delete from './modal/Delete';
 import UserEksModel from '../../model/UserEksModel';
+import KemasanJson from '../../assets/json/jenisKemasan.json'
+import SatuanJson from '../../assets/json/satuan.json'
+import PelabuhanJson from '../../assets/json/pelabuhan.json'
+import Select from 'react-select';
+
+function getKemasanByID(id) {
+    return KemasanJson.filter(item => item.id == id)[0]
+}
+
+function getSatuanByID(id) {
+    return SatuanJson.filter(item => item.id == id)[0]
+}
+
+const kodePsat = ['R017', 'A012', 'B001', 'B011', 'B015', 'B029', 'B085', 'B136', 'B140', 'B165', 'B319', 'B447', 'B448', 'B449', 'B450', 'B451', 'B452', 'B453', 'B454', 'B455', 'B456', 'B457', 'B458', 'B459', 'B460', 'B461', 'B462', 'B463', 'B464', 'B465', 'B466', 'B467', 'B468', 'B472', 'B475', 'B476', 'B480', 'B483', 'B484', 'B485', 'B486', 'B487', 'B490', 'B491', 'B493', 'B494', 'B495', 'B496', 'B498', 'B499', 'B500', 'B501', 'B505', 'B506', 'B749', 'B753', 'B755', 'B756', 'B757', 'B758', 'B759', 'C001', 'C004', 'C005', 'G004', 'G005', 'G006', 'G007', 'G008', 'J011', 'K012', 'K013', 'K014', 'K020', 'K021', 'K022', 'K089', 'K101', 'K109', 'K112', 'K141', 'L002', 'L016', 'L018', 'L019', 'N003', 'O005', 'O006', 'P013', 'P014', 'P015', 'R012', 'S009', 'S012', 'S014', 'S015', 'S020', 'S021', 'S022', 'S029', 'S033', 'S034', 'S035', 'S036', 'S037', 'S058', 'T011', 'T024', 'T038', 'T039', 'U001', 'U002', 'U003', 'K019', 'K007', 'K002', 'K017', 'J005', 'S059']
+
+const customStyles = {
+    menuPortal: base => ({ ...base, zIndex: 9999 }),
+    control: (provided, state) => ({
+        ...provided,
+        background: '#fff',
+        borderColor: '#6B7280',
+        borderRadius: '0.5rem',
+        cursor: 'text',
+        minHeight: '30px',
+        height: '35px',
+        boxShadow: state.isFocused ? null : null,
+    }),
+
+    valueContainer: (provided, state) => ({
+        ...provided,
+        height: '30px',
+        padding: '0 6px'
+    }),
+
+    input: (provided, state) => ({
+        ...provided,
+        margin: '0px',
+    }),
+    indicatorSeparator: state => ({
+        display: 'none',
+    }),
+    indicatorsContainer: (provided, state) => ({
+        ...provided,
+        height: '35px',
+    }),
+}
 
 const user = new SessionModel().getUserJson()
 const docModel = new DocPriorModel()
 const eksModel = new UserEksModel()
+
+const getPelabuhan = (kd) => {
+    const array = PelabuhanJson.filter(item => item.kode?.slice(0, 2) == kd)
+    let balikan = array.map(e => {
+        return {
+            value: e.kode,
+            label: e.kode + " - " + e.nama_en,
+            data: e
+        }
+    })
+    return balikan
+}
 
 function CreatePN1() {
     let { param } = useParams()
@@ -199,14 +257,22 @@ function CreatePN1() {
                 if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
                     console.log(response)
                 }
-                const arraykom = response?.data?.data?.map(item => {
+                let arraykom = response?.data?.data?.map(item => {
                     return {
-                        value: (karantina == "T" ? item.kode : item.id),
+                        value: (karantina == "T" ? item.kode_komoditas : item.id),
                         label: (karantina == "T" ? item.nama_en : item.nama),
                         latin: item.nama_latin,
                         data: item
                     }
                 })
+                if(karantina == "T") {
+                    arraykom = arraykom.filter(function (x) {
+                        return !kodePsat.some(function (y) {
+                            return JSON.stringify(x.value) == JSON.stringify(y);
+                        })
+                    });
+                    // arraykom = arraykom.filter(f => kodePsat.includes(f.value))
+                }
                 setDataSelect(values => ({ ...values, komoditas: arraykom }))
             })
             .catch((error) => {
@@ -217,35 +283,42 @@ function CreatePN1() {
             })
     }
 
-    const getMasterKomoditas = () => {
+    const getMasterKomoditas = (jenis) => {
+        console.log(jenis)
         if (karantina) {
             if (karantina == "T") {
-                const response = docModel.getMasterKomoditas(user?.country)
-                response
-                    .then((response) => {
-                        setLoading(false)
-                        if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
-                            console.log(response)
-                        }
-                        const arraykom = response?.data?.data?.map(item => {
-                            return {
-                                value: item.kode_komoditas,
-                                label: item.nama_ing,
-                                latin: item.nama_latin,
-                                data: item
+                if (jenis == "PSAT") {
+                    const response = docModel.getMasterKomoditas(user?.country)
+                    response
+                        .then((response) => {
+                            setLoading(false)
+                            if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                                console.log(response)
+                            }
+                            const arraykom = response?.data?.data?.map(item => {
+                                return {
+                                    value: item.kode_komoditas,
+                                    label: item.nama_ing,
+                                    latin: item.nama_latin,
+                                    data: item
+                                }
+                            })
+                            setDataSelect(values => ({ ...values, komoditas: arraykom }))
+                        })
+                        .catch((error) => {
+                            setLoading(false)
+                            if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                                console.log(error)
+                            }
+                            if(error.response.data.status == 404) {
+                                setDataSelect(values => ({ ...values, komoditas: [] }))
+                                // getMasterKomBarantin()
                             }
                         })
-                        setDataSelect(values => ({ ...values, komoditas: arraykom }))
-                    })
-                    .catch((error) => {
-                        setLoading(false)
-                        if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
-                            console.log(error)
-                        }
-                        if(error.response.data.status == 404) {
-                            getMasterKomBarantin()
-                        }
-                    })
+                } else if (jenis == "NON") {
+                    console.log("jalankom")
+                    getMasterKomBarantin()
+                }
             } else {
                 getMasterKomBarantin()
             }
@@ -292,7 +365,8 @@ function CreatePN1() {
                     const arraykom = response?.data?.data?.map(item => {
                         return {
                             value: item.kode,
-                            label: item.kode + " - " + item.nama,
+                            label: item.kode + " - " + (karantina == "T" ? item.nama : item.nama_en),
+                            isDisabled: item.kode ? false : true,
                             data: item
                         }
                     })
@@ -377,7 +451,7 @@ function CreatePN1() {
             <ToastContainer />
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex justify-between">
-                    <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">E-Prior Notice</h5>
+                    <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">E-Prior Notice - {karantina == 'I' ? 'Aquatic Animal & Product' : (karantina == 'T' ? 'Plant & Plant Product' : (karantina == 'H' ? 'Animal & Animal Product' : ""))}</h5>
                     <div className="flex">
                         <h5 className="mr-4 text-2xl text-gray-900 dark:text-white">No</h5>
                         <TextInput className='w-80' id='docnbr' name='docnbr' {...register("docnbr")} disabled />
@@ -653,7 +727,15 @@ function CreatePN1() {
                                 <div className="mb-1 block">
                                     <Label htmlFor="port_asal" value="Port of loading" />
                                 </div>
-                                <TextInput
+                                <Controller
+                                    control={control}
+                                    name={"port_asal"}
+                                    rules={{ required: "The field is required" }}
+                                    render={({ field: { value, onChange, ...field } }) => (
+                                        <Select className='w-60' styles={customStyles} defaultValue={""} value={{ id: watch('port_asal'), label: watch('port_asalView') }} {...field} options={getPelabuhan(user?.country)} onChange={(e) => setValue("port_asal", e.value) & setValue("port_asalView", e.label)} />
+                                    )}
+                                />
+                                {/* <TextInput
                                     {...register("port_asal", {
                                         required: "The port of loading is required",
                                         maxLength: {
@@ -666,13 +748,21 @@ function CreatePN1() {
                                             {errors.port_asal && <span className="font-medium">{errors.port_asal.message}</span>}
                                         </>
                                     }
-                                    id="port_asal" name='port_asal' color={errors.port_asal ? "failure" : "grey"} />
+                                    id="port_asal" name='port_asal' color={errors.port_asal ? "failure" : "grey"} /> */}
                             </div>
                             <div>
                                 <div className="mb-1 block">
                                     <Label htmlFor="port_tuju" value="Port of unloading" />
                                 </div>
-                                <TextInput
+                                <Controller
+                                    control={control}
+                                    name={"port_tuju"}
+                                    rules={{ required: "The field is required" }}
+                                    render={({ field: { value, onChange, ...field } }) => (
+                                        <Select className='w-60' styles={customStyles} defaultValue={""} value={{ id: watch('port_tuju'), label: watch('port_tujuView') }} {...field} options={getPelabuhan('ID')} onChange={(e) => setValue("port_tuju", e.value) & setValue("port_tujuView", e.label)} />
+                                    )}
+                                />
+                                {/* <TextInput
                                     {...register("port_tuju", {
                                         required: "The port of unloading is required",
                                         maxLength: {
@@ -685,7 +775,7 @@ function CreatePN1() {
                                             {errors.port_tuju && <span className="font-medium">{errors.port_tuju.message}</span>}
                                         </>
                                     }
-                                    id="port_tuju" name='port_tuju' color={errors.port_tuju ? "failure" : "grey"} />
+                                    id="port_tuju" name='port_tuju' color={errors.port_tuju ? "failure" : "grey"} /> */}
                             </div>
                             <div>
                                 <div className="mb-1 block">
@@ -886,7 +976,7 @@ function CreatePN1() {
 
                     <div className="overflow-x-auto">
                         <div className="flex justify-between">
-                            <Button onClick={() => setOpenModal(true) & getMasterKomoditas() & getMasterKodeHs() & getMasterRegLab()} type="button" className='mb-2' gradientMonochrome="info" size={'xs'}><CiCirclePlus className="mr-2 h-5 w-5" /> Input</Button>
+                            <Button onClick={() => setOpenModal(true) & getMasterKodeHs() & getMasterRegLab() & getMasterKomoditas()} type="button" className='mb-2' gradientMonochrome="info" size={'xs'}><CiCirclePlus className="mr-2 h-5 w-5" /> Input</Button>
                             <Button onClick={() => getKomoditas()} type="button" className='mb-2' gradientMonochrome="info" size={'xs'}><IoMdSync className="h-5 w-5" /></Button>
                         </div>
                         <Table striped hoverable>
@@ -908,8 +998,8 @@ function CreatePN1() {
                                                 {/* <Table.Cell className="font-medium text-gray-900 dark:text-white">{item.komoditas ?? ""}</Table.Cell> */}
                                                 <Table.Cell>{item.nama_ilmiah}</Table.Cell>
                                                 <Table.Cell>{item.hscode}</Table.Cell>
-                                                <Table.Cell>{item.jumlah}</Table.Cell>
-                                                <Table.Cell>{item.jumlahKemasan}</Table.Cell>
+                                                <Table.Cell>{item.jumlah + " " + getSatuanByID(item.satuan)?.nama_en}</Table.Cell>
+                                                <Table.Cell>{item.jumlahKemasan + " " + getKemasanByID(item.satuanKemasan)?.deskripsi}</Table.Cell>
                                                 <Table.Cell>{item.coa + (item.datecoa ? " (" + item.datecoa + ")" : "")}</Table.Cell>
                                                 <Table.Cell>{item.reglab}</Table.Cell>
                                                 <Table.Cell>
@@ -997,14 +1087,13 @@ function CreatePN1() {
                                         </Table.Body>
                                     </>
                                     : ""}
-
                             </Table>
                         </div>
                     </Card>
                 </div>
                 <div className="flex justify-center my-4">
                     <Button type={loading ? "button" : "submit"} disabled={loading} gradientDuoTone="greenToBlue" className='me-2'>{watch('docnbr') ? <IoSend className="mr-2 h-5 w-5 " /> : <IoSave className="mr-2 h-5 w-5 " />}{loading ? <Spinner aria-label="Default status example" /> : (watch('docnbr') ? 'Submit' : 'Save')}</Button>
-                    <Button href={import.meta.env.VITE_REACT_APP_BE_LINK + 'printPdf/doc/' + btoa(watch('docnbr'))} target='_blank' type="button" gradientMonochrome="info"><IoPrint className="mr-2 h-5 w-5" /> Print</Button>
+                    <Button style={{ display: (watch('docnbr') ? "block" : "none")}} href={import.meta.env.VITE_REACT_APP_BE_LINK + 'printPdf/doc/' + btoa(watch('docnbr'))} target='_blank' type="button" gradientMonochrome="info"><IoPrint className="mr-2 h-5 w-5" /> Print</Button>
                 </div>
             </form>
             <Komoditas

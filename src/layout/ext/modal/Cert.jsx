@@ -37,6 +37,7 @@ function Cert(props) {
                 // setValue('docnbr', response?.data?.data?.docnbr)
                 // setValue('stat', 1)
                 toast.success(response?.data?.message)
+                props.setOpenModalCert(false)
             })
             .catch((error) => {
                 setLoading(false)
@@ -44,8 +45,8 @@ function Cert(props) {
                     console.log(error)
                 }
                 toast.error(error?.response?.data?.message || "Failed")
+                props.setOpenModalCert(false)
             })
-        props.setOpenModalCert(false)
     }
 
     if (Number.isInteger(props.indexCert)) {

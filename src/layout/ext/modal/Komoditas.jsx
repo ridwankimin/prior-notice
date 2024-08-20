@@ -1,4 +1,4 @@
-import { Button, Label, Modal, Spinner, TextInput } from 'flowbite-react'
+import { Button, Label, Modal, Radio, Spinner, TextInput } from 'flowbite-react'
 import React, { useState } from 'react'
 import { IoSave } from "react-icons/io5"
 import { Controller, useForm } from 'react-hook-form'
@@ -90,6 +90,10 @@ function Komoditas(props) {
         return balik
     }
 
+    const onError = (values) => {
+        console.log(values)
+    }
+
     const onSubmit = (values) => {
         setLoading(true)
         const response = docModel.submitKomoditas(values, props.docnbr)
@@ -104,6 +108,7 @@ function Komoditas(props) {
                 // setValue('docnbr', response?.data?.data?.docnbr)
                 // setValue('stat', 1)
                 toast.success(response?.data?.message)
+                props.setOpenModal(false)
             })
             .catch((error) => {
                 setLoading(false)
@@ -111,8 +116,8 @@ function Komoditas(props) {
                     console.log(error)
                 }
                 toast.error(error?.response?.data?.message || "Failed")
+                props.setOpenModal(false)
             })
-        props.setOpenModal(false)
     }
 
     // if (Number.isInteger(props.indexKom)) {
@@ -138,13 +143,22 @@ function Komoditas(props) {
         <Modal show={props?.openModal} onClose={() => props.setOpenModal(false)} >
             <Modal.Header>Input Commodity</Modal.Header>
             <Modal.Body>
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form onSubmit={handleSubmit(onSubmit, onError)}>
                 {/* <div className="space-y-6"> */}
-                    {/* <div>
+                    <div style={{ display: (kar == "T" ? "block" : "none")}}>
                         <div className="mb-0 block">
-                            <Label htmlFor="karantina" value="Type of quarantine" />
+                            <Label htmlFor="karantina" value="Type of commodity" />
                         </div>
-                        <Select className='w-40' id="karantina" name='karantina' sizing="sm" color={errors.karantina ? "failure" : "grey"}
+                        <div className="flex items-center gap-2 me-8">
+                            <Radio id="psat1" name="is_psat" onClick={() => props.getMasterKomoditas('PSAT') & setValue('kd_komoditi', '') & setValue('kd_komoditiView', '') & setValue("nama_ilmiah", '')} value="1" {...register("is_psat", {
+                                required: (props.karantina == "T" ? "The field is required" : false)
+                            })} />
+                            <Label htmlFor="psat1" className='me-4'>PSAT</Label>
+
+                            <Radio id="psat0" name="is_psat" value="0" onClick={() => props.getMasterKomoditas('NON') & setValue('kd_komoditi', '') & setValue('kd_komoditiView', '') & setValue("nama_ilmiah", '')} {...register("is_psat")} />
+                            <Label htmlFor="psat0">Non PSAT</Label>
+                        </div>
+                        {/* <Select className='w-40' id="karantina" name='karantina' sizing="sm" color={errors.karantina ? "failure" : "grey"}
                             {...register("karantina", {
                                 required: "The comodity is required",
                                 maxLength: {
@@ -161,9 +175,9 @@ function Komoditas(props) {
                             <option value="H">Animal</option>
                             <option value="I">Fish</option>
                             <option value="T">Plant</option>
-                        </Select>
+                        </Select> */}
+                    <hr />
                     </div>
-                    <hr /> */}
                 <div className="grid grid-cols-1 gap-4 mb-2 md:grid-cols-2">
                     <div>
                         <div className="mb-0 block">
@@ -219,17 +233,20 @@ function Komoditas(props) {
                                 <TextInput
                                     {...register("jumlah", {
                                         required: "The quantity is required",
-                                        valueAsNumber: true,
-                                        pattern: {
-                                            value: /^(0|[1-9]\d*)(\.\d+)?$/
-                                        }
+                                        // valueAsNumber: true,
+                                        min: 0,
+                                        // pattern: {
+                                        //     value: /^(0|[1-9]\d*)(\.\d+)?$/,
+                                        //     message: "value must be a number"
+                                        //     // value: /^[0-9]+$/
+                                        // }
                                     })}
                                     helperText={
                                         <>
                                             {errors.jumlah && <span className="font-medium">{errors.jumlah.message}</span>}
                                         </>
                                     }
-                                    type='number' id="jumlah" name='jumlah' sizing="sm" color={errors.jumlah ? "failure" : "grey"} />
+                                    type='number' min={0} id="jumlah" name='jumlah' sizing="sm" color={errors.jumlah ? "failure" : "grey"} />
                                 <Controller
                                     control={control}
                                     name={"satuan"}

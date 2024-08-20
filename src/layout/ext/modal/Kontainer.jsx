@@ -39,6 +39,7 @@ function Kontainer(props) {
                 // setValue('docnbr', response?.data?.data?.docnbr)
                 // setValue('stat', 1)
                 toast.success(response?.data?.message)
+                props.setOpenModalCont(false)
             })
             .catch((error) => {
                 setLoading(false)
@@ -46,8 +47,8 @@ function Kontainer(props) {
                     console.log(error)
                 }
                 toast.error(error?.response?.data?.message || "Failed")
+                props.setOpenModalCont(false)
             })
-        props.setOpenModalCont(false)
     }
     if (Number.isInteger(props.indexCont)) {
         setValue("id", props.listKontainer[props.indexCont]?.id)
