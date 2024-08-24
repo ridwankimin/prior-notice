@@ -349,7 +349,7 @@ function Komoditas(props) {
                         </div>
                         <TextInput
                             {...register("coa", {
-                                required: "The COA/HC Ref number is required",
+                                required: (props.negaraStat == 2 ? "The COA/HC Ref number is required" : false),
                                 maxLength: {
                                     value: 30,
                                     message: "Max length is 30"

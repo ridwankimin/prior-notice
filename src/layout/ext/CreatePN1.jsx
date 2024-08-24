@@ -134,31 +134,35 @@ function CreatePN1() {
     }, [setValue, user])
 
     const onSubmit = values => {
-        setLoading(true)
-        const response = docModel.submitDocument(values)
-        response
-            .then((response) => {
-                setLoading(false)
-                if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
-                    console.log(response)
-                }
-                setValue('docnbr', response?.data?.data?.docnbr)
-                setValue('stat', 1)
-                toast.success(response?.data?.message)
-            })
-            .catch((error) => {
-                setLoading(false)
-                if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
-                    console.log(error)
-                }
-                toast.error(error?.response?.data?.message || "Failed")
-            })
-        if (values.docnbr) {
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: "smooth"
-            });
+        if (values.docnbr && listCert?.length == 0) {
+            toast.error("Health/Sanitary/Phytosanitary Certificate is required")
+        } else {
+            setLoading(true)
+            const response = docModel.submitDocument(values)
+            response
+                .then((response) => {
+                    setLoading(false)
+                    if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                        console.log(response)
+                    }
+                    setValue('docnbr', response?.data?.data?.docnbr)
+                    setValue('stat', 1)
+                    toast.success(response?.data?.message)
+                })
+                .catch((error) => {
+                    setLoading(false)
+                    if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                        console.log(error)
+                    }
+                    toast.error(error?.response?.data?.message || "Failed")
+                })
+            if (values.docnbr) {
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: "smooth"
+                });
+            }
         }
     }
 
@@ -288,7 +292,7 @@ function CreatePN1() {
         if (karantina) {
             if (karantina == "T") {
                 if (jenis == "PSAT") {
-                    const response = docModel.getMasterKomoditas(user?.country)
+                    const response = docModel.getMasterKomoditas(watch('negaraStat') == 3 ? '00' : user?.country)
                     response
                         .then((response) => {
                             setLoading(false)
@@ -383,6 +387,20 @@ function CreatePN1() {
         }
     }
 
+    const getNegaraStat = useCallback(() => {
+        const response = docModel.getNegaraStat(user?.country)
+        response
+        .then((response) => {
+            console.log(response)
+            setValue('negaraStat', response.data?.data?.stat)
+        })
+        .catch((error) => {
+            if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+                console.log(error)
+            }
+        })
+    }, [setValue])
+
     const getDocPrior = useCallback(() => {
         if (idPrior) {
             const response = docModel.getDocPriorAll(idPrior)
@@ -444,7 +462,8 @@ function CreatePN1() {
     useEffect(() => {
         setExporter()
         getDocPrior()
-    }, [setExporter, getDocPrior])
+        getNegaraStat()
+    }, [setExporter, getDocPrior, getNegaraStat])
 
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -1109,6 +1128,7 @@ function CreatePN1() {
                 setIndexKom={setIndexKom}
                 indexKom={indexKom}
                 docnbr={watch('docnbr')}
+                negaraStat={watch('negaraStat')}
             />
             <Kontainer
                 openModalCont={openModalCont}
