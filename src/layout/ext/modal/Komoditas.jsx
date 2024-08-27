@@ -153,10 +153,10 @@ function Komoditas(props) {
                             <Radio id="psat1" name="is_psat" onClick={() => props.getMasterKomoditas('PSAT') & setValue('kd_komoditi', '') & setValue('kd_komoditiView', '') & setValue("nama_ilmiah", '')} value="1" {...register("is_psat", {
                                 required: (props.karantina == "T" ? "The field is required" : false)
                             })} />
-                            <Label htmlFor="psat1" className='me-4'>PSAT</Label>
+                            <Label htmlFor="psat1" className='me-4'>FPPO</Label>
 
                             <Radio id="psat0" name="is_psat" value="0" onClick={() => props.getMasterKomoditas('NON') & setValue('kd_komoditi', '') & setValue('kd_komoditiView', '') & setValue("nama_ilmiah", '')} {...register("is_psat")} />
-                            <Label htmlFor="psat0">Non PSAT</Label>
+                            <Label htmlFor="psat0">Non FPPO</Label>
                         </div>
                         {/* <Select className='w-40' id="karantina" name='karantina' sizing="sm" color={errors.karantina ? "failure" : "grey"}
                             {...register("karantina", {
@@ -349,7 +349,7 @@ function Komoditas(props) {
                         </div>
                         <TextInput
                             {...register("coa", {
-                                required: (props.negaraStat == 2 ? "The COA/HC Ref number is required" : false),
+                                required: (props.negaraStat == '2' || props.negaraStat == '1,2' || props.negaraStat == '3' ? "The COA/HC Ref number is required" : false),
                                 maxLength: {
                                     value: 30,
                                     message: "Max length is 30"

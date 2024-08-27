@@ -70,7 +70,7 @@ const tableCustomStyles = {
             <div className='flex'>
                 {e.stat == 1 ?
                         <Button href={import.meta.env.VITE_REACT_APP_BE_LINK + 'printPdf/doc/' + btoa(e.docnbr)} target='_blank' size={'sm'} pill outline gradientDuoTone="greenToBlue" title='Print'><FiPrinter/></Button>
-                        : <Link to={"/create/k" + e.karantina?.toLowerCase() + e.docnbr}><Button onClick={() => handleClick(e)} size={'sm'} pill outline gradientDuoTone="purpleToBlue" title='Print'><IoMdReturnRight /></Button></Link>
+                        : <Link to={"/create/k" + e.karantina?.toLowerCase() + btoa(e.docnbr)}><Button onClick={() => handleClick(e)} size={'sm'} pill outline gradientDuoTone="purpleToBlue" title='Print'><IoMdReturnRight /></Button></Link>
         }
                     {/* <button className="btn btn-sm btn-outline-dark me-1" type="button" title='Cetak Billing' onClick={() => handleClick(e)}><i className="fa-solid fa-print"></i></button> */}
             </div>,

@@ -84,7 +84,7 @@ function CreatePN1() {
     let karantina = ""
     let idPrior = ""
     if (param.length > 2) {
-        idPrior = param.slice(2)
+        idPrior = atob(param.slice(2))
         karantina = param.slice(1, 2)?.toUpperCase()
     } else {
         karantina = param?.slice(1, 2)?.toUpperCase()
@@ -134,8 +134,13 @@ function CreatePN1() {
     }, [setValue, user])
 
     const onSubmit = values => {
-        if (values.docnbr && listCert?.length == 0) {
+        if (values.docnbr && (listCert?.length == 0 || listKomoditas?.length == 0)) {
+            if (listKomoditas?.length == 0) {
+                toast.error("Detail commodity is required")
+            }
+            if (listCert?.length == 0) {
             toast.error("Health/Sanitary/Phytosanitary Certificate is required")
+            }
         } else {
             setLoading(true)
             const response = docModel.submitDocument(values)
@@ -991,7 +996,7 @@ function CreatePN1() {
                     </Card>
                 </div>
                 <Card style={{ display: (watch('docnbr') ? "block" : "none") }}>
-                    <h5 className="text-xl font-bold text-gray-900 dark:text-white"><u>Description of FPPO</u></h5>
+                    <h5 className="text-xl font-bold text-gray-900 dark:text-white"><u>Description of Commodity</u></h5>
 
                     <div className="overflow-x-auto">
                         <div className="flex justify-between">
