@@ -5,6 +5,22 @@ const username = import.meta.env.VITE_REACT_APP_SITE_APIUSER
 const password = import.meta.env.VITE_REACT_APP_SITE_APIPASS
 
 export default class DocPriorModel {
+    getDocPriorNumber(nmr) {
+        let config = {
+            method: 'get',
+            maxBodyLength: Infinity,
+            url: urlApi + 'docPrior?docnbr=' + nmr,
+            headers: {
+                'Authorization': 'Basic ' + btoa(username + ':' + password),
+            }
+        };
+
+        if (import.meta.env.VITE_REACT_APP_BE_ENV == "DEV") {
+            console.log(JSON.stringify(config))
+        }
+        return axios.request(config)
+    }
+
     submitDocument(values) {
         let config = {
             method: (values?.docnbr ? 'put' : 'post'),

@@ -153,10 +153,10 @@ function Komoditas(props) {
                             <Radio id="psat1" name="is_psat" onClick={() => props.getMasterKomoditas('PSAT') & setValue('kd_komoditi', '') & setValue('kd_komoditiView', '') & setValue("nama_ilmiah", '')} value="1" {...register("is_psat", {
                                 required: (props.karantina == "T" ? "The field is required" : false)
                             })} />
-                            <Label htmlFor="psat1" className='me-4'>FPPO</Label>
+                            <Label htmlFor="psat1" className='me-4'>Fresh Food of Plant Origin (FFPO)</Label>
 
                             <Radio id="psat0" name="is_psat" value="0" onClick={() => props.getMasterKomoditas('NON') & setValue('kd_komoditi', '') & setValue('kd_komoditiView', '') & setValue("nama_ilmiah", '')} {...register("is_psat")} />
-                            <Label htmlFor="psat0">Non FPPO</Label>
+                            <Label htmlFor="psat0"><strong>Non</strong> Fresh Food of Plant Origin (<strong>Non</strong> FFPO)</Label>
                         </div>
                         {/* <Select className='w-40' id="karantina" name='karantina' sizing="sm" color={errors.karantina ? "failure" : "grey"}
                             {...register("karantina", {
@@ -246,7 +246,7 @@ function Komoditas(props) {
                                             {errors.jumlah && <span className="font-medium">{errors.jumlah.message}</span>}
                                         </>
                                     }
-                                    type='number' min={0} id="jumlah" name='jumlah' sizing="sm" color={errors.jumlah ? "failure" : "grey"} />
+                                    type='number' min={0} step={0.01} id="jumlah" name='jumlah' sizing="sm" color={errors.jumlah ? "failure" : "grey"} />
                                 <Controller
                                     control={control}
                                     name={"satuan"}
@@ -302,7 +302,7 @@ function Komoditas(props) {
                                             {errors.jumlahKemasan && <span className="font-medium">{errors.jumlahKemasan.message}</span>}
                                         </>
                                     }
-                                    type='number' id="jumlahKemasan" name='jumlahKemasan' sizing="sm" color={errors.jumlahKemasan ? "failure" : "grey"} />
+                                    type='number' step={0.01} id="jumlahKemasan" name='jumlahKemasan' sizing="sm" color={errors.jumlahKemasan ? "failure" : "grey"} />
                                 <Controller
                                     control={control}
                                     name={"satuanKemasan"}

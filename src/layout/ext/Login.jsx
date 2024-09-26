@@ -1,11 +1,13 @@
-import { Alert, Button, Label, Spinner, TextInput } from 'flowbite-react';
+import { Alert, Button, Label, Spinner, TextInput, Modal } from 'flowbite-react';
 import React, { useCallback, useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom'
 // import { IoMdSync } from "react-icons/io";
 import { MdOutlineSync } from "react-icons/md";
 import { HiInformationCircle } from "react-icons/hi"
+import { FaBook } from "react-icons/fa";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io"
+import { IoSearch } from "react-icons/io5";
 // import { CSSTransition } from 'react-transition-group'
 import LogoBarantin from '../../assets/logo/logo_barantin.png'
 import BarantinTulisan from '../../assets/logo/barantin_tulisan_putih.png'
@@ -19,6 +21,9 @@ import c7 from '../../assets/captcha/7.jpg'
 import c8 from '../../assets/captcha/8.jpg'
 import c9 from '../../assets/captcha/9.jpg'
 import UserEksModel from '../../model/UserEksModel';
+import CariPrior from './CariPrior';
+import Manualuser from './modal/Manualuser';
+import manual from '../../assets/user_manual_prior_notice.pdf'
 import("./styleLogin.css")
 
 const modelUser = new UserEksModel()
@@ -39,7 +44,10 @@ function randomText(length) {
 
 function Login() {
     let [alert, setAlert] = useState("")
+    let [openKamera, setOpenKamera] = useState(false)
     let [loading, setLoading] = useState(false)
+    const [openModal, setOpenModal] = useState(false);
+    let [openManual, setOpenManual] = useState(false);
     let [textCapt, setTextCapt] = useState({
         img: undefined,
         text: "",
@@ -103,7 +111,11 @@ function Login() {
                 }));
             })
         } else {
-            setAlert('Captcha tidak sama!')
+            setAlert(values => ({
+                ...values,
+                status: false,
+                pesan: 'Wrong Captcha!',
+            }));
         }
     }
 
@@ -113,8 +125,8 @@ function Login() {
     }, [styleBgCapt, textToImage])
   return (
       <div className="bg-white dark:bg-gray-900">
-          <div className="flex justify-center h-screen">
-              <div className="hidden bg-cover lg:block lg:w-2/3" style={{backgroundImage: "url(https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)"}}>
+          <div className="flex form-bg justify-center h-screen">
+              <div className="hidden lg:block lg:w-2/3" style={{backgroundImage: "url(https://images.unsplash.com/photo-1616763355603-9755a640a287?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&w=1470&q=80)"}}>
                   <div className='row w-100 pt-2' style={{ backgroundImage: ("linear-gradient(to right, #123138, rgba(255,0,0,0)"), position: "sticky", height: "110px" }}>
                       <div className="flex-row">
                           <div className="mx-auto">
@@ -125,21 +137,32 @@ function Login() {
                           </div>
                       </div>
                   </div>
-                  <div className="flex items-center h-full px-20 bg-gray-900 bg-opacity-40">
+                  <div className="flex items-center h-full px-10 bg-gray-900 bg-opacity-40">
                       {/* <div>
                           <h2 className="text-2xl font-bold text-white sm:text-3xl">Meraki UI</h2>
-
+                          
                           <p className="max-w-xl mt-3 text-gray-300">
                               Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
                               autem ipsa, nulla laboriosam dolores, repellendus perferendis libero suscipit nam temporibus
                               molestiae
-                          </p>
-                      </div> */}
+                              </p>
+                            </div> */}
+                      <CariPrior />
                   </div>
               </div>
 
               <div className="flex items-center w-full max-w-md px-6 mx-auto lg:w-2/6">
                   <div className="flex-1">
+                      {/* <div style={{ minHeight: '50px' }}><a className='text-sm text-center lg:text-gray-200 text-gray-400' href="https://karantinaindonesia.go.id" target='_blank'>https://karantinaindonesia.go.id</a></div> */}
+                      <center className='lg:hidden py-6 mt-20'>
+                          <Button pill outline gradientDuoTone="greenToBlue" onClick={() => setOpenModal(true)}><IoSearch className='me-2' /> Search Prior Notice</Button>
+                          <Modal show={openModal} size="md" onClose={() => setOpenModal(false)} popup>
+                              <Modal.Header />
+                              <Modal.Body>
+                                    <CariPrior bg="" />
+                              </Modal.Body>
+                          </Modal>
+                      </center>
                       <div className="text-center">
                           <div className="flex justify-center mx-auto">
                               <img className="w-auto sm:h-18" style={{ height:'145px' }} src={LogoBarantin} alt="" />
@@ -147,6 +170,16 @@ function Login() {
                           <h1 className='text-2xl font-bold dark:text-white'>Prior Notice</h1>
                           <p className="mt-3 text-gray-500 dark:text-gray-300">Sign in to access your account</p>
                       </div>
+                          <center className='pt-6'>
+                          <Button size='sm' pill gradientDuoTone="greenToBlue" onClick={() => setOpenManual(true)}><FaBook className="mr-2 h-5 w-5" /> <u>User manual</u></Button>
+                            {/* <a type='button' onClick={() => setOpenManual(true)}>User manual</a> */}
+                            </center>
+                          <Modal position="top-center" size="6xl" show={openManual} onClose={() => setOpenManual(false)} popup>
+                              <Modal.Header>User Manual - Prior Notice</Modal.Header>
+                              <Modal.Body>
+                                  <iframe className='h-screen' src={manual} width={'100%'} frameborder="0"></iframe>
+                              </Modal.Body>
+                          </Modal>
 
                       <div className="mt-8">
                           <form onSubmit={handleSubmit(onSubmit)}>
@@ -221,7 +254,7 @@ function Login() {
                               </div>
 
                               <div className="mt-6">
-                                  <Button type={loading ? 'button' : 'submit'} disabled={loading} gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>{loading ? <Spinner aria-label="Default status example" /> : 'Sign Up'}</Button>
+                                  <Button type={loading ? 'button' : 'submit'} disabled={loading} gradientDuoTone="purpleToBlue" className='flex items-center mt-3 w-full text-center' pill>{loading ? <Spinner aria-label="Default status example" /> : 'Sign In'}</Button>
 
                                   {/* <button className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-300 transform bg-blue-500 rounded-lg hover:bg-blue-400 focus:outline-none focus:bg-blue-400 focus:ring focus:ring-blue-300 focus:ring-opacity-50">
                                       Sign in
@@ -243,9 +276,12 @@ function Login() {
                           
                           {/* </CSSTransition> */}
                       </div>
+                  <center className='lg:hidden mt-10'><a className='text-sm text-center lg:text-gray-200 text-gray-400' href="https://karantinaindonesia.go.id" target='_blank'>https://karantinaindonesia.go.id</a></center>
                   </div>
+                  <div className='hidden lg:block' style={{ minHeight: '5px', bottom: '10px', left: '10px', position: 'absolute' }}><a className='text-sm text-center lg:text-gray-200 text-gray-400' href="https://karantinaindonesia.go.id" target='_blank'>https://karantinaindonesia.go.id</a></div>
               </div>
           </div>
+          {/* <Manualuser openModal={openManual} setOpenManual={setOpenManual} /> */}
       </div>
   )
 }

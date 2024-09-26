@@ -1,13 +1,15 @@
 import { Alert, Avatar, Button, Dropdown, Navbar } from 'flowbite-react'
-import React from 'react'
+import React, { useState } from 'react'
 import BarantinLogo from '../../assets/logo/logo_barantin.png'
 import { Link, useLocation } from 'react-router-dom'
 import SessionModel from '../../model/SessionModel'
+import ResetPassword from './modal/ResetPassword'
 
 const user = new SessionModel().getUserJson()
 
 function Header() {
     let location = useLocation();
+    let [openModalReset, setOpenModalReset] = useState(false)
 
     const logout = () => {
         localStorage.clear()
@@ -55,7 +57,7 @@ function Header() {
                             <span className="block truncate text-sm font-medium">{user?.email}</span>
                         </Dropdown.Header>
                         <Dropdown.Item>Profile</Dropdown.Item>
-                        <Dropdown.Item>Reset Password</Dropdown.Item>
+                        <Dropdown.Item onClick={() => setOpenModalReset(true)}>Reset Password</Dropdown.Item>
                         <Dropdown.Divider />
                         <Dropdown.Item onClick={() => logout()}>Sign out</Dropdown.Item>
                     </Dropdown>
@@ -68,6 +70,10 @@ function Header() {
                     Welcome <span className="font-medium">{user?.company}</span>
                 </Alert>
                 : ""}
+            <ResetPassword
+                openModalReset={openModalReset}
+                setOpenModalReset={setOpenModalReset}
+            />
         </>
     )
 }

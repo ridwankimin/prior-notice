@@ -14,7 +14,7 @@ function Home() {
   }
   return (
     <Fragment>
-      <Header />
+        <Header />
         <Outlet />
         <FooterPage />
     </Fragment>

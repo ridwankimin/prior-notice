@@ -12,13 +12,14 @@ import SessionModel from '../../model/SessionModel';
 import Kontainer from './modal/Kontainer';
 import Cert from './modal/Cert';
 import DocPriorModel from '../../model/DocPriorModel';
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Delete from './modal/Delete';
 import UserEksModel from '../../model/UserEksModel';
 import KemasanJson from '../../assets/json/jenisKemasan.json'
 import SatuanJson from '../../assets/json/satuan.json'
 import PelabuhanJson from '../../assets/json/pelabuhan.json'
+import NegaraJson from '../../assets/json/kodeNegara.json'
 import Select from 'react-select';
 
 function getKemasanByID(id) {
@@ -79,6 +80,21 @@ const getPelabuhan = (kd) => {
     return balikan
 }
 
+const getNegara = (kd) => {
+    let array = NegaraJson
+    if(kd) {
+        array = NegaraJson.filter(item => item.code == kd)
+    }
+    let balikan = array.map(e => {
+        return {
+            value: e.code,
+            label: e.code + " - " + e.name,
+            data: e
+        }
+    })
+    return balikan
+}
+
 function CreatePN1() {
     let { param } = useParams()
     let karantina = ""
@@ -125,6 +141,9 @@ function CreatePN1() {
         setValue('name', user?.firstname + " " + user?.lastname)
         setValue('company', user?.company)
         setValue('kdneg', user?.country)
+        setValue('kdneg_origin', user?.country)
+        const namaneg = getNegara(user?.country)
+        setValue('kdneg_originView', namaneg[0]?.label)
         setValue('telp', user?.phone)
         setValue('alamat', user?.address)
         setValue('karantina', karantina)
@@ -269,7 +288,7 @@ function CreatePN1() {
                 let arraykom = response?.data?.data?.map(item => {
                     return {
                         value: (karantina == "T" ? item.kode_komoditas : item.id),
-                        label: (karantina == "T" ? item.nama_en : item.nama),
+                        label: item.nama_en,
                         latin: item.nama_latin,
                         data: item
                     }
@@ -374,7 +393,7 @@ function CreatePN1() {
                     const arraykom = response?.data?.data?.map(item => {
                         return {
                             value: item.kode,
-                            label: item.kode + " - " + (karantina == "T" ? item.nama : item.nama_en),
+                            label: item.kode + " - " + item.nama_en,
                             isDisabled: item.kode ? false : true,
                             data: item
                         }
@@ -424,6 +443,9 @@ function CreatePN1() {
                     setValue('alamat', response?.data?.data?.alamat)
                     setValue('email', response?.data?.data?.email)
                     setValue('kdneg', response?.data?.data?.kdneg)
+                    setValue('kdneg_origin', response?.data?.data?.kdneg)
+                    const namaneg = getNegara(response?.data?.data?.kdneg)
+                    setValue('kdneg_originView', namaneg[0]?.label)
                     setValue('telp', response?.data?.data?.telp)
                     setValue('name_imp', response?.data?.data?.name_imp)
                     setValue('company_imp', response?.data?.data?.company_imp)
@@ -472,7 +494,6 @@ function CreatePN1() {
 
     return (
         <div className="w-full bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <ToastContainer />
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="flex justify-between">
                     <h5 className="mb-2 text-3xl font-bold text-gray-900 dark:text-white">E-Prior Notice - {karantina == 'I' ? 'Aquatic Animal & Product' : (karantina == 'T' ? 'Plant & Plant Product' : (karantina == 'H' ? 'Animal & Animal Product' : ""))}</h5>
@@ -997,7 +1018,33 @@ function CreatePN1() {
                 </div>
                 <Card style={{ display: (watch('docnbr') ? "block" : "none") }}>
                     <h5 className="text-xl font-bold text-gray-900 dark:text-white"><u>Description of Commodity</u></h5>
-
+                    <div className='flex'>
+                        <div className="mb-2 block me-8">
+                            <Label htmlFor="place_issued" value="Country of Origin" />
+                        </div>
+                        <Controller
+                            control={control}
+                            name={"kdneg_origin"}
+                            rules={{ required: "The field is required" }}
+                            render={({ field: { value, onChange, ...field } }) => (
+                                <Select className='w-80' styles={customStyles} defaultValue={""} value={{ id: watch('kdneg_origin'), label: watch('kdneg_originView') }} {...field} options={getNegara('')} onChange={(e) => setValue("kdneg_origin", e.value) & setValue("kdneg_originView", e.label)} />
+                            )}
+                        />
+                        {/* <TextInput
+                            {...register("place_issued", {
+                                required: "The place of issued is required",
+                                maxLength: {
+                                    value: 50,
+                                    message: "Max length is 50"
+                                }getNegara
+                            })}
+                            helperText={
+                                <>
+                                    {errors.place_issued && <span className="font-medium">{errors.place_issued.message}</span>}
+                                </>
+                            }
+                            className='w-60' id="place_issued" name='place_issued' color={errors.place_issued ? "failure" : "grey"} /> */}
+                    </div>
                     <div className="overflow-x-auto">
                         <div className="flex justify-between">
                             <Button onClick={() => setOpenModal(true) & getMasterKodeHs() & getMasterRegLab() & getMasterKomoditas()} type="button" className='mb-2' gradientMonochrome="info" size={'xs'}><CiCirclePlus className="mr-2 h-5 w-5" /> Input</Button>
